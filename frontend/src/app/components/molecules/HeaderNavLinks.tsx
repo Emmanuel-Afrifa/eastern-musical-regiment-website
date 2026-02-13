@@ -43,7 +43,7 @@ const HeaderNavLinks = () => {
             >
                 <Button
                     content={
-                        <div className="h-10 w-10 bg-gold rounded-full flex justify-center items-center">
+                        <div className="h-10 w-10 bg-gold rounded-full flex justify-center items-center animate-bump">
                             <FontAwesomeIcon icon={faWindowClose} className="bg-gold/70 text-xl" />
                         </div>  
                     }
@@ -52,7 +52,7 @@ const HeaderNavLinks = () => {
                     handleClick={() => setOpenNavbar(false)}
                 />
                 {navLinks.map(navLink => {
-                    const isActive = navLink.href === pathname || pathname.startsWith(navLink.href)
+                    const isActive = navLink.href === "/" ? pathname === "/" : pathname === navLink.href || (pathname.startsWith(navLink.href))
 
                     return (
                         <li 
