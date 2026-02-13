@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { Montserrat, Inter } from "next/font/google";
 import "./globals.css";
+import Header from "./components/organisms/Header";
 import "@fortawesome/fontawesome-svg-core/styles.css"
 import { config } from "@fortawesome/fontawesome-svg-core"
 config.autoAddCss = false
+
 
 const montserrat = Montserrat({
     variable: "--font-montserrat",
@@ -28,11 +30,14 @@ export default function RootLayout({
 }>) {
     return (
       <html lang="en" className="scroll-smooth">
-          <body
-            className={`${montserrat.variable} ${inter.variable} antialiased`}
-          >
-              {children}
-          </body>
+            <Header />
+            <body
+                className={`${montserrat.variable} ${inter.variable} antialiased`}
+            >
+                <main>
+                    {children}
+                </main>
+            </body>
       </html>
     );
 }
