@@ -18,12 +18,12 @@ const HeroSection = () => {
                         <Button
                             content="Join the Regiment"
                             ariaLabel="join button"
-                            classname="button bg-gold px-10 py-3 text-[14px] md:text-base 2xl:text-lg text-fg-black border-2 border-transparent"
+                            classname="button bg-gold font-montserrat px-10 py-3 text-[14px] md:text-base 2xl:text-lg text-fg-black border-2 border-transparent"
                         />
                         <Button
                             content="Join the Regiment"
                             ariaLabel="second join button"
-                            classname="button px-10 py-3 text-[14px] md:text-base 2xl:text-lg bg-fg-black text-gold border-2 border-gold"
+                            classname="button px-10 py-3 font-montserrat text-[14px] md:text-base 2xl:text-lg bg-fg-black text-gold border-2 border-gold"
                         />
                     </div>
                 </div>
