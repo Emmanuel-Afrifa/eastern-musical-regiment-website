@@ -20,7 +20,7 @@ const MusicalLegacySection = () => {
                         Founded to preserve and celebrate musical traditions while embracing 
                         modern innovation.
                     </p>
-                    <p className="mt-8 text-fg-gray text-base lg:text-lg">
+                    <p className="mt-8 text-fg-gray section-description-text">
                         Our diverse ensemble of brass, wind, and percussion musicians performs at 
                         cultural events, competitions, and community celebrations, bringing 
                         people together through the universal language of music.

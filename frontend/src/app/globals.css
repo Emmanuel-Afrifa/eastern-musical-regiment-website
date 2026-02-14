@@ -66,6 +66,10 @@
     .section-header-text {
         @apply text-4xl md:text-5xl lg:text-6xl
     }
+
+    .section-description-text {
+        @apply text-base lg:text-lg max-w-[40ch] md:max-w-[60ch] lg:max-w-[80ch]
+    }
 }
 
 /* @media (prefers-color-scheme: dark) {

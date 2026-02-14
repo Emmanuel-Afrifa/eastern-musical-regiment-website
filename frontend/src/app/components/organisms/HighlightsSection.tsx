@@ -32,7 +32,7 @@ const HighlightsSection = () => {
                             return (
                                 <div 
                                     key={video.id}
-                                    className="w-full max-w-xl flex flex-col items-center px-4 mb-8"
+                                    className="w-full max-w-xl flex flex-col items-center px-4 mb-5 lg:mb-8"
                                 >
                                     <div className="w-full rounded-2xl md:rounded-4xl border border-gold/40 ">
                                         <YoutubeCard videoId={video.videoId}/>
