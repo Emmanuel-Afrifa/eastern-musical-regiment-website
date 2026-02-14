@@ -1,3 +1,5 @@
+"use client"
+
 type ButtonProps = {
     content: string | React.ReactNode;
     classname: string;

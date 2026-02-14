@@ -34,6 +34,36 @@
     --animate-bump: bumping 4s linear infinite;
 }
 
+@layer base {
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-montserrat font-bold
+    }
+
+    p {
+        @apply font-inter
+    }
+}
+
+@layer utilities {
+    .center {
+        @apply flex justify-center items-center
+    }
+
+    .home-bg {
+        background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("../../public/images/hero-img.webp");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        min-height: 100dvh;
+        min-height: 100vh;
+    }
+
+    .button {
+        @apply rounded-xl cursor-pointer font-semibold
+    }
+}
+
 /* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;

@@ -28,7 +28,7 @@ const HeaderNavLinks = () => {
     ]
 
     return (
-        <div className="relative border-2">
+        <div className="relative">
             <Button
                 content={
                     <FontAwesomeIcon icon={faBars} className="bg-gold text-xl" />
@@ -38,7 +38,7 @@ const HeaderNavLinks = () => {
                 handleClick={() => setOpenNavbar(true)}
             />
             <ul 
-                className={`${openNavbar ? "flex" : "hidden"} pl-10 lg:pl-0 pt-10 pb-28 lg:py-0 lg:flex flex-col lg:flex-row gap-5 fixed inset-0 lg:sticky z-60 backdrop-blur-3xl bg-bg-black/70 w-full`}
+                className={`${openNavbar ? "flex" : "hidden"} pl-10 lg:pl-0 pt-10 pb-28 lg:py-0 lg:flex flex-col lg:flex-row gap-5 fixed inset-0 lg:sticky z-60 backdrop-blur-3xl bg-fg-black/70 w-full`}
                 onClick={() => setOpenNavbar(false)}
             >
                 <Button

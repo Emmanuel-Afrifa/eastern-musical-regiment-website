@@ -1,7 +1,9 @@
+import HomePageTemplate from "./components/_templates/HomePageTemplate";
+
 export default function Home() {
     return (
         <section>
-          This is the home page
+            <HomePageTemplate />
         </section>
     );
 }
