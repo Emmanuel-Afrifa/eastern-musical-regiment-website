@@ -3,7 +3,7 @@ import Container from "../atoms/Container"
 
 const HeroSection = () => {
     return (
-        <section className="w-full min-h-screen center home-bg py-28">
+        <section id="hero" className="w-full min-h-screen center home-bg py-28">
             <Container>
                 <div className="w-full flex flex-col items-center pt-10 px-4">
                     <h1 className="text-white text-4xl md:text-6xl xl:text-8xl 2xl:text-9xl text-center mb-8 md:mb-10 2xl:mb-16">
