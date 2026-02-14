@@ -30,16 +30,14 @@ export default function RootLayout({
 }>) {
     return (
       <html lang="en" className="scroll-smooth">
-        <>
-            <Header />
-            <body
-                className={`${montserrat.variable} ${inter.variable} antialiased`}
-            >
-                <main>
-                    {children}
-                </main>
-            </body>
-        </>
+        <body
+            className={`${montserrat.variable} ${inter.variable} antialiased`}
+        >
+            <main>
+                <Header />
+                {children}
+            </main>
+        </body>
       </html>
     );
 }

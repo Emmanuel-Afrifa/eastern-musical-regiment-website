@@ -12,7 +12,7 @@ const TitleSplitColors = ({firstTitle, secondTitle, firstColor = "text-white", s
     TitleProps
 ) => {
     return (
-        <h2 className={cn("text-4xl md:text-5xl lg:text-6xl", firstColor, classname)}>
+        <h2 className={cn("section-header-text", firstColor, classname)}>
             {firstTitle} <br />
             <span className={cn(secondColor)}>{secondTitle}</span>
         </h2>

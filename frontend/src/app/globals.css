@@ -62,6 +62,10 @@
     .button {
         @apply rounded-xl cursor-pointer font-semibold
     }
+
+    .section-header-text {
+        @apply text-4xl md:text-5xl lg:text-6xl
+    }
 }
 
 /* @media (prefers-color-scheme: dark) {

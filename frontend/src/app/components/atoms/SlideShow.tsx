@@ -27,7 +27,7 @@ const SlideShow = () => {
 
         const interval = setInterval(() => {
             setIndex(prevIndex => (prevIndex + 1) % images.length)
-        }, 2000);
+        }, 2500);
 
         return () => clearInterval(interval)
 
@@ -47,7 +47,7 @@ const SlideShow = () => {
                         alt="regiment performance image"
                         fill
                         className={cn(
-                            "absolute inset-0 transition-all duration-2000 object-cover w-full h-full md:rounded-3xl",
+                            "absolute inset-0 transition-all duration-1000 object-cover w-full h-full md:rounded-3xl",
                             i === index ? "opacity-100" : "opacity-0"
                         )}
                     />
