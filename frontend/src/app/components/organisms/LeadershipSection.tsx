@@ -10,10 +10,10 @@ const LeadershipSection = () => {
     return (
         <Section bgColor="bg-fg-black">
             <Container>
-                <div>
-                    <h2 className="text-white">Meet Our Leadership</h2>
-                    <p className="text-fg-gray">The passionate individuals guiding our musical journey</p>
-                    <div>
+                <div className="flex flex-col items-center px-6 md:px-10">
+                    <h2 className="text-white section-header-text mb-6 text-center">Meet Our Leadership</h2>
+                    <p className="text-fg-gray section-description-text mb-16 text-center">The passionate individuals guiding our musical journey</p>
+                    <div className="flex flex-wrap justify-center items-center gap-16">
                         {leadersData.map(leader => {
                             return (
                                 <LeaderCard key={leader.id} leaderInfo={leader}/>

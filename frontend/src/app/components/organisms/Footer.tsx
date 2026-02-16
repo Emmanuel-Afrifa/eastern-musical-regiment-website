@@ -32,7 +32,7 @@ const Footer = () => {
                                         return (
                                             <li
                                                 key={link.id}
-                                                className="text-fg-dark-gray text-[12px] md:text-base lg:text-lg font-inter"
+                                                className="text-fg-dark-gray text-xs md:text-base lg:text-lg font-inter"
                                             >
                                                 <Link 
                                                     href={link.href}
@@ -48,7 +48,7 @@ const Footer = () => {
 
                             <div className="mt-8 md:mt-0">
                                 <h3 className="font-inter text-lg md:text-xl font-bold text-white mb-6">Contact Us</h3>
-                                <ul className="flex flex-col gap-3 md:gap-4 lg:gap-5 text-fg-dark-gray text-[12px] md:text-base lg:text-lg font-inter">
+                                <ul className="flex flex-col gap-3 md:gap-4 lg:gap-5 text-fg-dark-gray text-xs md:text-base lg:text-lg font-inter">
                                     <li>
                                         <p>
                                             <FontAwesomeIcon icon={faHome} className="text-gold mr-4" />
@@ -85,10 +85,10 @@ const Footer = () => {
                     </div>
 
                     <div className='flex flex-col md:flex-row justify-between items-center mt-10'>
-                        <p className='text-fg-dark-gray text-center text-[12px] md:text-base'>
+                        <p className='text-fg-dark-gray text-center text-xs md:text-base'>
                             <small>© 2026 Eastern Musical Regiment. All rights reserved.</small>
                         </p>
-                        <p className='text-fg-dark-gray text-center text-[12px] md:text-base'>  
+                        <p className='text-fg-dark-gray text-center text-xs md:text-base'>  
                             <small>Developed by <span className='text-gold/80 underline-grow'><a href="https://www.linkedin.com/in/emmanuel-afrifa-840674214/" rel="noopener noreferrer" target='_blank'>Emmanuel Afrifa</a></span></small>
                         </p>
                     </div>

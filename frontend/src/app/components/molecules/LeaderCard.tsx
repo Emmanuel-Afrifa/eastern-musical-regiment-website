@@ -41,26 +41,27 @@ const LeaderCard = ({leaderInfo}: {leaderInfo: LeaderProps}) => {
     ]
 
     return (
-        <div>
-            <div className="relative">
+        <div className="flex flex-col w-full max-w-sm rounded-2xl bg-bg-black">
+            <div className="relative aspect-3/4 rounded-t-2xl">
                 <Image
                     src={leaderInfo.image.src}
                     alt={leaderInfo.image.alt || "leader image"}
                     fill
-                    className="object-cover w-full h-full"
+                    className="object-cover w-full h-full rounded-t-2xl"
                 />
             </div>
-            <div>
-                <h3 className="text-white">{leaderInfo.name}</h3>
-                <p className="text-gold">{leaderInfo.role}</p>
-                <p className="text-fg-dark-gray">{leaderInfo.bio}</p>
-                <div>
+            <div className="p-6">
+                <h3 className="text-white text-lg md:text-xl mb-5">{leaderInfo.name}</h3>
+                <p className="text-gold text-base md:text-lg mb-5">{leaderInfo.role}</p>
+                <p className="text-fg-dark-gray text-xs md:text-sm lg:text-base mb-5">{leaderInfo.bio}</p>
+                <div className="flex gap-3 flex-wrap">
                     {leaderInfo.phone && (
                         <a 
                             href={`tel:${leaderInfo.phone}`}
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label={`${leaderInfo.role.toLowerCase()}'s phone number`}
+                            className="text-fg-dark-gray hover:text-gold/80"
                         >
                             <FontAwesomeIcon icon={faPhone} />
                         </a>
@@ -71,6 +72,7 @@ const LeaderCard = ({leaderInfo}: {leaderInfo: LeaderProps}) => {
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label={`${leaderInfo.role.toLowerCase()}'s email address`}
+                            className="text-fg-dark-gray hover:text-gold/80"
                         >
                             <FontAwesomeIcon icon={faEnvelope} />
                         </a>
@@ -84,8 +86,9 @@ const LeaderCard = ({leaderInfo}: {leaderInfo: LeaderProps}) => {
                                 aria-label={`${leaderInfo.role}'s ${socialAcc.ariaLabel}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                className="text-fg-dark-gray hover:text-gold/80"
                             >
-                                <FontAwesomeIcon icon={socialAcc.icon} />
+                                <FontAwesomeIcon icon={socialAcc.icon} size="lg" />
                             </a>
                         )
                     })}
