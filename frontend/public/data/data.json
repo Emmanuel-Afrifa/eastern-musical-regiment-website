@@ -43,7 +43,7 @@
             }
         },
         {
-            "id": "01",
+            "id": "03",
             "name": "Some Name Here",
             "role": "Chairman",
             "phone": "+233123456789",
@@ -64,7 +64,7 @@
             }
         },
         {
-            "id": "01",
+            "id": "04",
             "name": "Some Name Here",
             "role": "Secretary",
             "phone": "+233123456789",
