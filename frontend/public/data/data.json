@@ -84,5 +84,31 @@
                 "youtube": "abcd"
             }
         }
+    ],
+    "milestones": [
+        {
+            "id": "01",
+            "year": "2017",
+            "title": "Foundation",
+            "description": "Eastern Musical Regiment was established by a group of passionate musicians committed to preserving cultural heritage through brass band music."
+        },
+        {
+            "id": "02",
+            "year": "2017",
+            "title": "Foundation",
+            "description": "Eastern Musical Regiment was established by a group of passionate musicians committed to preserving cultural heritage through brass band music."
+        },
+        {
+            "id": "03",
+            "year": "2017",
+            "title": "Foundation",
+            "description": "Eastern Musical Regiment was established by a group of passionate musicians committed to preserving cultural heritage through brass band music."
+        },
+        {
+            "id": "04",
+            "year": "2017",
+            "title": "Foundation",
+            "description": "Eastern Musical Regiment was established by a group of passionate musicians committed to preserving cultural heritage through brass band music."
+        }
     ]
 }

@@ -5,7 +5,7 @@ import TitleSplitColors from "../atoms/TitleSplitColors"
 
 const AboutIntroSection = () => {
     return (
-        <Section classname="min-h-screen">
+        <Section classname="py-70">
             <Container>
                 <div className="flex flex-col items-center px-6 md:px-10 text-center">
                     <TitleSplitColors
