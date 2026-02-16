@@ -1,9 +1,9 @@
-import React from 'react'
+import BandsPageTemplate from "../components/_templates/BandsPageTemplate"
 
 const page = () => {
     return (
         <section>
-            This is the bands page
+            <BandsPageTemplate />
         </section>
     )
 }
