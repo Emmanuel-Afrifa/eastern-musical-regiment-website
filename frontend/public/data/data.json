@@ -1,0 +1,80 @@
+{
+    "leaders": [
+        {
+            "id": "01",
+            "name": "Some Name Here",
+            "role": "President",
+            "phone": "+233123456789",
+            "email": "someone@example.com",
+            "bio": "With over 25 years of musical leadership, Kwame brings passion and precision to every performance.",
+            "socials": [
+                {
+                    "facebook": "abcd",
+                    "instagram": "abcd",
+                    "whastsapp": "abcd",
+                    "twitter": "abcd",
+                    "linkedin": "abcd",
+                    "tiktok": "abcd",
+                    "youtube": "abcd"
+                }
+            ]
+        },
+        {
+            "id": "02",
+            "name": "Some Name Here",
+            "role": "Vice President",
+            "phone": "+233123456789",
+            "email": "someone@example.com",
+            "bio": "With over 25 years of musical leadership, Kwame brings passion and precision to every performance.",
+            "socials": [
+                {
+                    "facebook": "abcd",
+                    "instagram": "abcd",
+                    "whastsapp": "abcd",
+                    "twitter": "abcd",
+                    "linkedin": "abcd",
+                    "tiktok": "abcd",
+                    "youtube": "abcd"
+                }
+            ]
+        },
+        {
+            "id": "01",
+            "name": "Some Name Here",
+            "role": "Chairman",
+            "phone": "+233123456789",
+            "email": "someone@example.com",
+            "bio": "With over 25 years of musical leadership, Kwame brings passion and precision to every performance.",
+            "socials": [
+                {
+                    "facebook": "abcd",
+                    "instagram": "abcd",
+                    "whastsapp": "abcd",
+                    "twitter": "abcd",
+                    "linkedin": "abcd",
+                    "tiktok": "abcd",
+                    "youtube": "abcd"
+                }
+            ]
+        },
+        {
+            "id": "01",
+            "name": "Some Name Here",
+            "role": "Secretary",
+            "phone": "+233123456789",
+            "email": "someone@example.com",
+            "bio": "With over 25 years of musical leadership, Kwame brings passion and precision to every performance.",
+            "socials": [
+                {
+                    "facebook": "abcd",
+                    "instagram": "abcd",
+                    "whastsapp": "abcd",
+                    "twitter": "abcd",
+                    "linkedin": "abcd",
+                    "tiktok": "abcd",
+                    "youtube": "abcd"
+                }
+            ]
+        }
+    ]
+}
