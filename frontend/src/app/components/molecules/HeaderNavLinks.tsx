@@ -2,7 +2,7 @@
 import Button from "../atoms/Button"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars, faWindowClose } from "@fortawesome/free-solid-svg-icons"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 
@@ -10,6 +10,10 @@ const HeaderNavLinks = () => {
 
     const [openNavbar, setOpenNavbar] = useState<boolean>(false)
     const pathname = usePathname()
+
+    useEffect(() => {
+        document.body.style.overflow = openNavbar ? "hidden" : "auto"
+    })
 
     console.log(openNavbar)
 

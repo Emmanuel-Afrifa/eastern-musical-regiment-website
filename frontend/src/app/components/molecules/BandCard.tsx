@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Button from "../atoms/Button"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons"
@@ -24,6 +24,11 @@ const BandCard = ({bandItem}: {bandItem: BandProps}) => {
 
     const [showOverlay, setShowOverlay] = useState<boolean>(false)
     const [currentIndex, setCurrentIndex] = useState<number>(0)
+
+    useEffect(() => {
+        document.body.style.overflow = showOverlay ? "hidden" : "auto"
+    }, [showOverlay])
+
     const normalizedBandMedia = bandItem.bandMedia ?? []
 
     const mediaLength = normalizedBandMedia.length
