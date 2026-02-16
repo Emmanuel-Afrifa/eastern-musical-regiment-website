@@ -16,7 +16,7 @@ const JournerSection = () => {
                         Our Journey
                     </h2>
                     <p 
-                        className="text-fg-dark-gray section-description-text mb-8 md:mb-10 text-center"
+                        className="text-fg-dark-gray section-description-text mb-2 text-center"
                     >
                         Milestones that shaped our musical legacy
                     </p>

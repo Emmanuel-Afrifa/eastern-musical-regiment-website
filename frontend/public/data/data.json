@@ -110,5 +110,17 @@
             "title": "Foundation",
             "description": "Eastern Musical Regiment was established by a group of passionate musicians committed to preserving cultural heritage through brass band music."
         }
+    ],
+    "coreStatements": [
+        {
+            "id": "01",
+            "title": "Our Mission",
+            "description": "To preserve, celebrate, and innovate within the traditions of brass band music while fostering community, cultural pride, and musical excellence across all generations."
+        },
+        {
+            "id": "02",
+            "title": "Our Vision",
+            "description": "To be recognized globally as a leading cultural institution that unites communities through exceptional musical performances and education, inspiring the next generation of artists."
+        }
     ]
 }

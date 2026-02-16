@@ -13,7 +13,7 @@ const TimelineItem = ({timelineDetails, index}: TimelineProps) => {
     const isLeft = index % 2 === 0
 
     return (
-        <div className="relative w-full grid md:grid-cols-2 items-center my-14 md:my-8">
+        <div className="relative w-full grid md:grid-cols-2 items-center my-16">
             {/* Item Placement */}
             <div
                 className={`${isLeft ? "md:col-start-1 md:text-right": "md:col-start-2 md:text-left"}`}
