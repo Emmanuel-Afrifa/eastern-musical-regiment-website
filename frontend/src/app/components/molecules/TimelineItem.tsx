@@ -28,9 +28,9 @@ const TimelineItem = ({timelineDetails, index}: TimelineProps) => {
                                 {timelineDetails.year}
                             </span>
                         </p>
-                        <h4 className="font-semibold font-inter text-white text-xl md:text-2xl lg:text-3xl xl:text-4xl my-4 md:my-6">
+                        <h3 className="font-semibold font-inter text-white text-xl md:text-2xl lg:text-3xl xl:text-4xl my-4 md:my-6">
                             {timelineDetails.title}
-                        </h4>
+                        </h3>
                         <p className="text-fg-gray text-sm md:text-base lg:text-lg mb-6 md:mb-0">
                             {timelineDetails.description}
                         </p>

@@ -41,13 +41,13 @@ const LeaderCard = ({leaderInfo}: {leaderInfo: LeaderProps}) => {
     ]
 
     return (
-        <div className="flex flex-col w-full max-w-sm rounded-2xl bg-bg-black">
-            <div className="relative aspect-3/4 rounded-t-2xl">
+        <div className="flex flex-col w-full max-w-sm rounded-2xl bg-bg-black overflow-hidden group">
+            <div className="relative aspect-3/4 rounded-t-2xl overflow-hidden">
                 <Image
                     src={leaderInfo.image.src}
                     alt={leaderInfo.image.alt || "leader image"}
                     fill
-                    className="object-cover w-full h-full rounded-t-2xl"
+                    className="object-cover w-full h-full rounded-t-2xl group-hover:scale-110 transition-all duration-700 group-hover:opacity-70"
                 />
             </div>
             <div className="p-6">

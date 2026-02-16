@@ -1,6 +1,7 @@
 import AboutIntroSection from "../organisms/AboutIntroSection"
 import LeadershipSection from "../organisms/LeadershipSection"
 import JournerSection from "../organisms/JournerSection"
+import CoreStatementsSection from "../organisms/CoreStatementsSection"
 
 const AboutPageTemplate = () => {
     return (
@@ -8,6 +9,7 @@ const AboutPageTemplate = () => {
             <AboutIntroSection />
             <LeadershipSection />
             <JournerSection />
+            <CoreStatementsSection />
         </section>
     )
 }
