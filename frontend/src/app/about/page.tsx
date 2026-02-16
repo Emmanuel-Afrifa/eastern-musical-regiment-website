@@ -1,8 +1,9 @@
+import AboutPageTemplate from "../components/_templates/AboutPageTemplate"
 
 const page = () => {
     return (
         <section>
-            This is the about us page
+            <AboutPageTemplate />
         </section>
     )
 }
