@@ -1,12 +1,12 @@
 "use client"
 import Button from "../atoms/Button"
-import { useState } from "react"
-import playIcon from "../../../../public/images/play-icon.svg"
+import playIcon from "../../../public/images/play-icon.svg"
 import Image from "next/image"
+import { useToggle } from "@/src/hooks/useToggle"
 
 const YoutubeCard = ({videoId}: {videoId: string}) => {
 
-    const [play, setPlay] = useState<boolean>(false)
+    const [play, setPlay] = useToggle(false)
 
     return (
         <div className="relative cursor-pointer group rounded-2xl md:rounded-4xl overflow-hidden aspect-video">
@@ -35,7 +35,7 @@ const YoutubeCard = ({videoId}: {videoId: string}) => {
                         }
                         ariaLabel="play button"
                         classname="absolute inset-0 z-20 flex items-center justify-center cursor-pointer"
-                        handleClick={() => setPlay(true)}
+                        handleClick={setPlay}
                     />
                 </>
             )}

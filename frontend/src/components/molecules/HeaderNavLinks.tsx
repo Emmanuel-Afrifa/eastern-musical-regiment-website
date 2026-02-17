@@ -2,20 +2,19 @@
 import Button from "../atoms/Button"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars, faWindowClose } from "@fortawesome/free-solid-svg-icons"
-import { useState, useEffect } from "react"
+import { useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import { useToggle } from "@/src/hooks/useToggle"
 
 const HeaderNavLinks = () => {
 
-    const [openNavbar, setOpenNavbar] = useState<boolean>(false)
+    const [openNavbar, setOpenNavbar] = useToggle(false)
     const pathname = usePathname()
 
     useEffect(() => {
         document.body.style.overflow = openNavbar ? "hidden" : "auto"
     })
-
-    console.log(openNavbar)
 
     type NavItem = {
         id: string;
@@ -39,11 +38,11 @@ const HeaderNavLinks = () => {
                 }
                 ariaLabel="navbar open button"
                 classname={`lg:hidden ${openNavbar ? "hidden" : "flex"}`}
-                handleClick={() => setOpenNavbar(true)}
+                handleClick={setOpenNavbar}
             />
             <ul 
                 className={`${openNavbar ? "flex" : "hidden"} pl-10 lg:pl-0 pt-10 pb-28 lg:py-0 lg:flex flex-col lg:flex-row gap-5 fixed inset-0 lg:sticky z-60 backdrop-blur-3xl bg-fg-black/70 w-full`}
-                onClick={() => setOpenNavbar(false)}
+                onClick={setOpenNavbar}
             >
                 <Button
                     content={
@@ -53,7 +52,7 @@ const HeaderNavLinks = () => {
                     }
                     ariaLabel="navbar close button"
                     classname={`lg:hidden ${openNavbar ? "flex" : "hidden"}`}
-                    handleClick={() => setOpenNavbar(false)}
+                    handleClick={setOpenNavbar}
                 />
                 {navLinks.map(navLink => {
                     const isActive = navLink.href === "/" ? pathname === "/" : pathname === navLink.href || (pathname.startsWith(navLink.href))

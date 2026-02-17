@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Montserrat, Inter } from "next/font/google";
 import "./globals.css";
-import Header from "./components/organisms/Header";
-import Footer from "./components/organisms/Footer";
+import Header from "../components/organisms/Header";
+import Footer from "../components/organisms/Footer";
 import "@fortawesome/fontawesome-svg-core/styles.css"
 import { config } from "@fortawesome/fontawesome-svg-core"
 config.autoAddCss = false

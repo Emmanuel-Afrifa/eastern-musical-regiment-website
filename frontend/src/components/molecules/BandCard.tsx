@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons"
 import { faClose } from "@fortawesome/free-solid-svg-icons"
 import YoutubeCard from "./YoutubeCard"
+import { useToggle } from "@/src/hooks/useToggle"
 
 type BandProps = {
     id: string;
@@ -22,7 +23,7 @@ type BandProps = {
 
 const BandCard = ({bandItem}: {bandItem: BandProps}) => {
 
-    const [showOverlay, setShowOverlay] = useState<boolean>(false)
+    const [showOverlay, setShowOverlay] = useToggle(false)
     const [currentIndex, setCurrentIndex] = useState<number>(0)
 
     useEffect(() => {
@@ -43,7 +44,7 @@ const BandCard = ({bandItem}: {bandItem: BandProps}) => {
             <div className="flex flex-col xl:flex-row items-center justify-center">
                 <div 
                     className="relative aspect-video w-full md:w-3/4 lg:w-1/2 rounded-2xl cursor-pointer"
-                    onClick={() => setShowOverlay(true)}
+                    onClick={setShowOverlay}
                 >
                     <Image 
                         src={bandItem.image}
@@ -85,7 +86,7 @@ const BandCard = ({bandItem}: {bandItem: BandProps}) => {
                                 }
                                 ariaLabel="close button"
                                 classname="button text-gold"
-                                handleClick={() => setShowOverlay(false)}
+                                handleClick={setShowOverlay}
                             />
                         </div>
 

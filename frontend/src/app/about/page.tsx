@@ -1,4 +1,4 @@
-import AboutPageTemplate from "../components/_templates/AboutPageTemplate"
+import AboutPageTemplate from "@/src/components/_templates/AboutPageTemplate"
 
 const page = () => {
     return (

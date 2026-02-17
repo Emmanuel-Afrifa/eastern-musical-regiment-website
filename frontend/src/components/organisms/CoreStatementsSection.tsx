@@ -1,7 +1,7 @@
 "use client"
 import Section from "../atoms/Section"
 import Container from "../atoms/Container"
-import data from "../../../../public/data/data.json"
+import data from "../../../public/data/data.json"
 import CoreStatementItem from "../molecules/CoreStatementItem"
 import { useState } from "react"
 

@@ -1,5 +1,5 @@
 import Image from "next/image"
-import emrLogo from "../../../../public/images/EMR_LOGO.svg"
+import emrLogo from "../../../public/images/EMR_LOGO.svg"
 
 const Logo = () => {
     return (

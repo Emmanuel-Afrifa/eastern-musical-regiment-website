@@ -1,6 +1,6 @@
 import Section from "../atoms/Section"
 import Container from "../atoms/Container"
-import data from "../../../../public/data/data.json"
+import data from "../../../public/data/data.json"
 import BandCard from "../molecules/BandCard"
 
 const BandsListSection = () => {

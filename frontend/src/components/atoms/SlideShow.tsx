@@ -2,11 +2,12 @@
 import { useState, useEffect, useMemo } from "react"
 import Image from "next/image"
 import { cn } from "@/src/lib/cn"
+import { useToggle } from "@/src/hooks/useToggle"
 
 const SlideShow = () => {
 
     const [index, setIndex] = useState<number>(0)
-    const [paused, setPaused] = useState<boolean>(false)
+    const [paused, setPaused] = useToggle(false)
 
     const images: string[] = useMemo(() => {
         return (
@@ -36,8 +37,8 @@ const SlideShow = () => {
     return (
         <div 
             className="relative overflow-hidden aspect-video w-full md:w-[85%] h-auto mx-auto md:rounded-3xl cursor-pointer"
-            onMouseEnter={() => setPaused(true)}
-            onMouseLeave={() => setPaused(false)}
+            onMouseEnter={setPaused}
+            onMouseLeave={setPaused}
         >
             {images.map((image, i) => {
                 return (
