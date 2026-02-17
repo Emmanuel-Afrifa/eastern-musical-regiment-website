@@ -1,0 +1,35 @@
+# ======================
+# Node
+# ======================
+node_modules/
+npm-debug.log*
+yarn-error.log*
+pnpm-lock.yaml
+
+# ======================
+# Environment variables
+# ======================
+.env
+.env.*
+!.env.example
+
+# ======================
+# Next.js
+# ======================
+frontend/.next/
+frontend/out/
+frontend/node_modules/
+
+# ======================
+# Strapi
+# ======================
+cms/node_modules/
+cms/build/
+cms/.cache/
+cms/database.sqlite
+
+# ======================
+# OS
+# ======================
+.DS_Store
+Thumbs.db

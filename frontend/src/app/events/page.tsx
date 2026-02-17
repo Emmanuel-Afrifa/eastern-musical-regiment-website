@@ -1,8 +1,9 @@
+import EventsPageTemplate from "@/src/components/_templates/EventsPageTemplate"
 
 const page = () => {
     return (
         <section>
-            This is the events page
+            <EventsPageTemplate />
         </section>
     )
 }

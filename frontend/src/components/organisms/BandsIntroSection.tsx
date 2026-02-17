@@ -12,7 +12,7 @@ const BandsIntroSection = () => {
                         firstTitle="Affiliated Bands &"
                         secondTitle="Musical Groups"
                     />
-                    <p className="text-fg-gray mt-14 text-center section-description-text">
+                    <p className="text-fg-gray mt-8 lg:mt-14 text-center section-description-text">
                         Discover the diverse ensembles that make up the Eastern Musical Regiment 
                         family, each bringing unique talents and musical traditions.
                     </p>

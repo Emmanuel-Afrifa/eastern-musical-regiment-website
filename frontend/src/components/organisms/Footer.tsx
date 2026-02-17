@@ -50,10 +50,10 @@ const Footer = () => {
                                 <h3 className="font-inter text-lg md:text-xl font-bold text-white mb-6">Contact Us</h3>
                                 <ul className="flex flex-col gap-3 md:gap-4 lg:gap-5 text-fg-dark-gray text-xs md:text-base lg:text-lg font-inter">
                                     <li>
-                                        <p>
+                                        <div className="flex items-center">
                                             <FontAwesomeIcon icon={faHome} className="text-gold mr-4" />
-                                            <span>123 Music Avenue Accra, Ghana</span>
-                                        </p>
+                                            <p className="inline-block">123 Music Avenue Accra, Ghana</p>
+                                        </div>
                                     </li>
 
                                     <li>
