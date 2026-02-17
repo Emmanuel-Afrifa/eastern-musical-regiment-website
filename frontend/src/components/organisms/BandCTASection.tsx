@@ -1,20 +1,25 @@
 import Section from "../atoms/Section"
 import Container from "../atoms/Container"
-import Button from "../atoms/Button"
 import TitleSplitColors from "../atoms/TitleSplitColors"
+import Button from "../atoms/Button"
 
-const BandsIntroSection = () => {
+const BandCTASection = () => {
     return (
-        <Section classname="py-50">
+        <Section>
             <Container>
                 <div className="flex flex-col items-center px-6 md:px-10 text-center">
                     <TitleSplitColors
-                        firstTitle="Affiliated Bands &"
-                        secondTitle="Musical Groups"
+                        firstTitle="Find Your"
+                        secondTitle="Musical Home"
                     />
                     <p className="text-fg-gray mt-14 text-center section-description-text">
-                        Discover the diverse ensembles that make up the Eastern Musical Regiment 
-                        family, each bringing unique talents and musical traditions.
+                        Planning something unforgettable? Whether it&apos;s a wedding, corporate 
+                        gathering, private celebration or public event, our executive team will 
+                        carefully match you with a band that fits your vision, audience, and 
+                        atmosphere.
+                    </p>
+                    <p className="text-fg-gray mt-6 text-center section-description-text">
+                        Reach out today and let us help you create a performance worth remembering.
                     </p>
                     <Button
                         content="Request a Band"
@@ -27,4 +32,4 @@ const BandsIntroSection = () => {
     )
 }
 
-export default BandsIntroSection
+export default BandCTASection
