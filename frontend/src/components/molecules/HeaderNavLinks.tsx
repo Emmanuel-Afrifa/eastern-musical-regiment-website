@@ -2,19 +2,34 @@
 import Button from "../atoms/Button"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars, faWindowClose } from "@fortawesome/free-solid-svg-icons"
-import { useEffect } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { useToggle } from "@/src/hooks/useToggle"
 
 const HeaderNavLinks = () => {
 
-    const [openNavbar, setOpenNavbar] = useToggle(false)
+    const [openNavbar, setOpenNavbar] = useState(false)
     const pathname = usePathname()
 
     useEffect(() => {
         document.body.style.overflow = openNavbar ? "hidden" : "auto"
-    })
+
+        return () => {
+            document.body.style.overflow = "auto"
+        }
+    }, [openNavbar])
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth >= 1024) {
+                setOpenNavbar(false)
+            }
+        }
+
+        window.addEventListener("resize", handleResize)
+
+        return () => window.removeEventListener("resize", handleResize)
+    }, [])
 
     type NavItem = {
         id: string;
@@ -37,12 +52,14 @@ const HeaderNavLinks = () => {
                     <FontAwesomeIcon icon={faBars} className="bg-gold text-xl" />
                 }
                 ariaLabel="navbar open button"
-                classname={`lg:hidden ${openNavbar ? "hidden" : "flex"}`}
-                handleClick={setOpenNavbar}
+                classname={`lg:hidden ${openNavbar ? "hidden" : "flex"} cursor-pointer`}
+                handleClick={() => setOpenNavbar(true)}
             />
             <ul 
-                className={`${openNavbar ? "flex" : "hidden"} pl-10 lg:pl-0 pt-10 pb-28 lg:py-0 lg:flex flex-col lg:flex-row gap-5 fixed inset-0 lg:sticky z-60 backdrop-blur-3xl bg-fg-black/70 w-full`}
-                onClick={setOpenNavbar}
+                className={`${openNavbar ? "flex" : "hidden"} pl-10 pt-10 pb-28 
+                    lg:flex flex-col lg:flex-row gap-5 fixed inset-0 lg:sticky z-60 cursor-pointer
+                    backdrop-blur-3xl bg-fg-black/70 w-full lg:px-10 lg:py-2 lg:rounded-full lg:bg-fg-fade-white/40`}
+                // onClick={toggleOpenNavbar}
             >
                 <Button
                     content={
@@ -51,8 +68,8 @@ const HeaderNavLinks = () => {
                         </div>  
                     }
                     ariaLabel="navbar close button"
-                    classname={`lg:hidden ${openNavbar ? "flex" : "hidden"}`}
-                    handleClick={setOpenNavbar}
+                    classname={`lg:hidden ${openNavbar ? "flex" : "hidden"} cursor-pointer`}
+                    handleClick={() => setOpenNavbar(false)}
                 />
                 {navLinks.map(navLink => {
                     const isActive = navLink.href === "/" ? pathname === "/" : pathname === navLink.href || (pathname.startsWith(navLink.href))
@@ -64,7 +81,8 @@ const HeaderNavLinks = () => {
                             <Link 
                                 href={navLink.href}
                                 aria-label={navLink.ariaLabel}
-                                className={`${isActive ? "text-gold": "text-white"} hover:text-gold/60 transition-all duration-150 font-inter`}
+                                className={`${isActive ? "text-gold lg:hover:text-gold/60": "text-white lg:text-fg-black lg:opacity-60 lg:hover:opacity-100"} transition-all duration-150 font-inter`}
+                                onClick={() => setOpenNavbar(false)}
                             >
                                 {navLink.name}
                             </Link>

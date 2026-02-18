@@ -8,7 +8,7 @@ const JournerSection = () => {
     const timelineData = data.milestones
 
     return (
-        <Section>
+        <Section id="journey">
             <Container>
                 <div className="flex flex-col items-center">
                     <h2 

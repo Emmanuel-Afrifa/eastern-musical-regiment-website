@@ -20,7 +20,7 @@ const Footer = () => {
     ]
 
     return (
-        <footer className="w-full center bg-fg-black py-28">
+        <footer className="w-full center bg-fg-black py-28 footer-bg">
             <Container>
                 <div className="flex flex-col px-6 md:px-10 lg:px-30">
                     <div className="flex flex-col">
@@ -32,7 +32,7 @@ const Footer = () => {
                                         return (
                                             <li
                                                 key={link.id}
-                                                className="text-fg-dark-gray text-xs md:text-base lg:text-lg font-inter"
+                                                className="text-fg-dark-gray text-xs md:text-base lg:text-lg font-inter bg-grow z-0 hover:px-5 hover:text-fg-black transition-all duration-500"
                                             >
                                                 <Link 
                                                     href={link.href}
@@ -64,7 +64,7 @@ const Footer = () => {
                                             aria-label="phone contact"
                                         >
                                             <FontAwesomeIcon icon={faPhone} className="text-gold mr-4" /> 
-                                            <span>+233 123 456 789</span>
+                                            <span className="bg-grow z-0 hover:px-5 hover:text-fg-black transition-all duration-500">+233 123 456 789</span>
                                         </a>
                                     </li>
 
@@ -76,7 +76,7 @@ const Footer = () => {
                                             aria-label="email address"
                                         >
                                             <FontAwesomeIcon icon={faEnvelope} className="text-gold mr-4" />
-                                            <span>info@example.com</span>
+                                            <span className="bg-grow z-0 hover:px-5 hover:text-fg-black transition-all duration-500">info@example.com</span>
                                         </a>
                                     </li>
                                 </ul>

@@ -4,6 +4,7 @@ import Container from "../atoms/Container"
 import Button from "../atoms/Button"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
+import Link from "next/link"
 
 const MusicalLegacySection = () => {
     return (
@@ -25,18 +26,20 @@ const MusicalLegacySection = () => {
                         cultural events, competitions, and community celebrations, bringing 
                         people together through the universal language of music.
                     </p>
-                    <Button
-                        content={
-                            <p className="text-gold">
-                                Learn Our Story 
-                                <span>
-                                    <FontAwesomeIcon icon={faArrowRight} className="ml-4" />
-                                </span>
-                            </p>
-                        }
-                        ariaLabel="learn our story button"
-                        classname="button font-inter text-left mt-15 text-base lg:text-lg"
-                    />
+                    <Link href="/about#journey">
+                        <Button
+                            content={
+                                <p className="text-gold bg-grow z-0 hover:px-5 py-2 hover:text-fg-black transition-all duration-500">
+                                    <span>Learn Our Story</span> 
+                                    <span>
+                                        <FontAwesomeIcon icon={faArrowRight} className="ml-4" />
+                                    </span>
+                                </p>
+                            }
+                            ariaLabel="learn our story button"
+                            classname="button font-inter text-left mt-15 text-base lg:text-lg"
+                        />
+                    </Link>
                 </div>      
             </Container>
         </Section>
