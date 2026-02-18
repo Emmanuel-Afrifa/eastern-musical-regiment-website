@@ -36,7 +36,7 @@ const SlideShow = () => {
 
     return (
         <div 
-            className="relative overflow-hidden aspect-video w-full md:w-[85%] h-auto mx-auto md:rounded-3xl cursor-pointer"
+            className="relative overflow-hidden aspect-video w-full md:w-[85%] h-auto max-h-screen mx-auto md:rounded-3xl cursor-pointer"
             onMouseEnter={setPaused}
             onMouseLeave={setPaused}
         >

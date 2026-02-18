@@ -43,14 +43,14 @@ const BandCard = ({bandItem}: {bandItem: BandProps}) => {
         <div className="relative">
             <div className="flex flex-col xl:flex-row items-center justify-center">
                 <div 
-                    className="relative aspect-video w-full md:w-3/4 lg:w-1/2 rounded-2xl cursor-pointer"
+                    className="relative aspect-video w-full md:w-3/4 lg:w-1/2 rounded-2xl cursor-pointer group overflow-hidden"
                     onClick={setShowOverlay}
                 >
                     <Image 
                         src={bandItem.image}
                         alt="band image"
                         fill
-                        className="object-cover w-full h-full rounded-2xl"
+                        className="object-cover w-full h-full rounded-2xl group-hover:scale-110 overflow-hidden group-hover:opacity-50 transition-all duration-500"
                     />
                 </div>
                 <div className="w-full lg:w-1/2 flex flex-col items-center xl:items-start xl:ml-14 mt-8 xl:mt-0">
