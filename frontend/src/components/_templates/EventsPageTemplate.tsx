@@ -1,4 +1,5 @@
 import EventsSection from "../organisms/EventsSection"
+import EventsIntroSection from "../organisms/EventsIntroSection"
 import { getEvents } from "@/src/lib/strapi/events"
 
 const EventsPageTemplate = async () => {
@@ -7,6 +8,7 @@ const EventsPageTemplate = async () => {
 
     return (
         <section>
+            <EventsIntroSection />
             <EventsSection events={events} />
         </section>
     )

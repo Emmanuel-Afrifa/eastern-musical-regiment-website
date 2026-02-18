@@ -40,17 +40,10 @@ const EventsSection = ({events}: {events: Event[]}) => {
     }
 
     return (
-        <Section classname="py-50 lg:py-70">
+        <Section>
             <Container>
                 <div className="flex flex-col items-center px-6 md:px-10 text-center">
-                    <TitleSplitColors
-                        firstTitle="Events &"
-                        secondTitle="Performances"
-                    />
-                    <p className="text-fg-gray mt-8 lg:mt-14 text-center section-description-text">
-                        Join us for unforgettable musical experiences throughout the year
-                    </p>
-                    <div className="mt-20">
+                    <div>
                         <EventsCard eventItem={eventItem} />
                     </div>
                     <div className="flex flex-wrap justify-center items-center gap-6 mt-14">

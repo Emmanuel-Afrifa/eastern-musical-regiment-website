@@ -2,20 +2,17 @@ import Section from "../atoms/Section"
 import Container from "../atoms/Container"
 import TitleSplitColors from "../atoms/TitleSplitColors"
 
-
-const AboutIntroSection = () => {
+const EventsIntroSection = () => {
     return (
-        <Section classname="h-screen 2xl:h-auto 2xl:py-70">
+        <Section classname="h-screen 2xl:py-70">
             <Container>
                 <div className="flex flex-col items-center px-6 md:px-10 text-center">
                     <TitleSplitColors
-                        firstTitle="Building a Musical"
-                        secondTitle="Legacy Together"
+                        firstTitle="Events &"
+                        secondTitle="Performances"
                     />
                     <p className="text-fg-gray mt-8 lg:mt-14 text-center section-description-text">
-                        For nearly three decades, the Eastern Musical Regiment has been at the 
-                        forefront of cultural and musical expression, uniting communities 
-                        through the power of brass, wind, and percussion.
+                        Join us for unforgettable musical experiences throughout the year
                     </p>
                 </div>
             </Container>
@@ -23,4 +20,4 @@ const AboutIntroSection = () => {
     )
 }
 
-export default AboutIntroSection
+export default EventsIntroSection

@@ -5,7 +5,7 @@ import TitleSplitColors from "../atoms/TitleSplitColors"
 
 const BandsIntroSection = () => {
     return (
-        <Section classname="py-50">
+        <Section classname="h-screen 2xl:h-auto 2xl:py-70">
             <Container>
                 <div className="flex flex-col items-center px-6 md:px-10 text-center">
                     <TitleSplitColors
