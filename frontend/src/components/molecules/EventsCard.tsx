@@ -43,7 +43,7 @@ const EventsCard = ({eventItem}: {eventItem: Event}) => {
                 <p className="text-xs md:text-sm lg:text-base text-fg-fade-white text-left mt-3 mb-3">{eventItem.Description}</p>
                 {eventItem.registrationLink && (
                     <a 
-                        className="text-fg-dark-gray text-base"
+                        className="text-fg-dark-gray text-base bg-grow z-0 hover:px-5 py-1 hover:text-fg-black transition-all duration-500"
                         href={eventItem.registrationLink}
                         target="_blank"
                         rel="noopener noreferrer"
