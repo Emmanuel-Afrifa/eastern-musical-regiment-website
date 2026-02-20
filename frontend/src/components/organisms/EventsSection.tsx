@@ -1,7 +1,6 @@
 "use client"
 import Section from "../atoms/Section"
 import Container from "../atoms/Container"
-import TitleSplitColors from "../atoms/TitleSplitColors"
 import { Event } from "@/src/lib/strapi/types"
 import EventsCard from "../molecules/EventsCard"
 import { useState } from "react"
