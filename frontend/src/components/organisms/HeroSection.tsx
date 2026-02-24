@@ -3,7 +3,7 @@ import Container from "../atoms/Container"
 
 const HeroSection = () => {
     return (
-        <section id="hero" className="w-full min-h-screen center home-bg py-28">
+        <section id="hero" className="w-full min-h-screen center home-bg py-28 md:py-14">
             <Container>
                 <div className="w-full flex flex-col items-center pt-10 px-4">
                     <h1 className="text-white text-4xl md:text-6xl xl:text-8xl 2xl:text-9xl text-center mb-8 md:mb-10 2xl:mb-16">
@@ -18,12 +18,12 @@ const HeroSection = () => {
                         <Button
                             content="Join the Regiment"
                             ariaLabel="join button"
-                            classname="button bg-gold font-montserrat px-10 py-3 text-sm md:text-base 2xl:text-lg text-fg-black border-2 border-transparent"
+                            classname="button bg-gold font-montserrat px-10 py-3 text-sm md:text-base 2xl:text-lg text-fg-black btn-hover btn-gold "
                         />
                         <Button
-                            content="Join the Regiment"
-                            ariaLabel="second join button"
-                            classname="button px-10 py-3 font-montserrat text-sm md:text-base 2xl:text-lg bg-fg-black text-gold border-2 border-gold"
+                            content="Request a Band"
+                            ariaLabel="request a band button"
+                            classname="button px-10 py-3 font-montserrat text-sm md:text-base 2xl:text-lg bg-fg-black text-fg-gray border-2 border-fg-gray btn-hover"
                         />
                     </div>
                 </div>

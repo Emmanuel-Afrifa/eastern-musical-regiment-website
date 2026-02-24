@@ -50,7 +50,7 @@ const BandCard = ({bandItem}: {bandItem: BandProps}) => {
                         src={bandItem.image}
                         alt="band image"
                         fill
-                        className="object-cover w-full h-full rounded-2xl group-hover:scale-110 overflow-hidden group-hover:opacity-50 transition-all duration-500"
+                        className="object-cover w-full h-full rounded-2xl group-hover:scale-110 overflow-hidden group-hover:opacity-50 transition-all duration-700"
                     />
                 </div>
                 <div className="w-full lg:w-1/2 flex flex-col items-center xl:items-start xl:ml-14 mt-8 xl:mt-0">

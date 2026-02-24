@@ -89,6 +89,13 @@
             after:transition-transform after:duration-400
             hover:after:scale-x-100;
     }
+
+    .btn-hover {
+        @apply hover:scale-[1.02] transition-all ease-in-out duration-500 
+                hover:opacity-90 hover:rounded-4xl hover:border-2 hover:border-gold hover:text-gold
+                hover:bg-bg-black hover:shadow-[0_0_15px_#eea60c94];
+    }
+
 }
 
 /* @media (prefers-color-scheme: dark) {

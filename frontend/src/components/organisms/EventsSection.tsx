@@ -42,7 +42,7 @@ const EventsSection = ({events}: {events: Event[]}) => {
         <Section>
             <Container>
                 <div className="flex flex-col items-center px-6 md:px-10 text-center">
-                    <div>
+                    <div id="eventsListing">
                         <EventsCard eventItem={eventItem} />
                     </div>
                     <div className="flex flex-wrap justify-center items-center gap-6 mt-14">

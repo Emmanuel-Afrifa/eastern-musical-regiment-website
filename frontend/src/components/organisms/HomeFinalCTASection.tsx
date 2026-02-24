@@ -21,7 +21,7 @@ const HomeFinalCTASection = () => {
                     <Button
                         content="Join the Regiment Today"
                         ariaLabel="join the regiment today button"
-                        classname="button bg-gold font-montserrat px-10 py-3 text-sm md:text-base 2xl:text-lg text-fg-black border-2 border-transparent mt-12"
+                        classname="button bg-gold font-montserrat px-10 py-3 text-sm md:text-base 2xl:text-lg text-fg-black border-2 border-transparent mt-12 btn-hover"
                     />
                 </div>
             </Container>
