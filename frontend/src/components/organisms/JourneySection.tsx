@@ -3,7 +3,7 @@ import Container from "../atoms/Container"
 import TimelineItem from "../molecules/TimelineItem"
 import data from "../../../public/data/data.json"
 
-const JournerSection = () => {
+const JourneySection = () => {
 
     const timelineData = data.milestones
 
@@ -42,4 +42,4 @@ const JournerSection = () => {
     )
 }
 
-export default JournerSection
+export default JourneySection

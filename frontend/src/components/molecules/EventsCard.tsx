@@ -6,8 +6,22 @@ import { getStrapiMedia } from "@/src/lib/strapi/events"
 
 const EventsCard = ({eventItem}: {eventItem: Event}) => {
 
+    const date = new Date(eventItem.Date)
+    const year = date.getFullYear()
+    const day = date.getDate()
+    const month = date.toLocaleString("default", { month: "long"})
+
+    const timeHour = eventItem.Time.slice(0, 2)
+    const timeSuffix = parseInt(timeHour, 10) < 12 ? "AM" : "PM"
+    const displayHour = parseInt(timeHour, 10) % 12 === 0 ? 12 : parseInt(timeHour, 10) % 12
+
+    const timeMinute = eventItem.Time.slice(3, 5)
+
     const eventSubDetails = [
-        {icon: faCalendar, subTitle: eventItem.Date, subSubTitle: eventItem.Time},
+        {
+            icon: faCalendar, 
+            subTitle: `${month} ${day}, ${year}`, 
+            subSubTitle: `${displayHour}:${timeMinute} ${timeSuffix}`},
         {icon: faLocation, subTitle: eventItem.Venue, subSubTitle: eventItem.City}
     ]
 
@@ -16,7 +30,7 @@ const EventsCard = ({eventItem}: {eventItem: Event}) => {
 
     return (
         <div className="flex flex-col w-full max-w-3xl">
-            <div className="relative aspect-square w-full mx-auto rounded-2xl">
+            <div className="relative aspect-square w-full max-w-lg mx-auto rounded-2xl">
                 <Image
                     src={imgSrc}
                     alt={eventItem.image.alternativeText || "event image"}

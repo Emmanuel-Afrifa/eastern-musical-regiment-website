@@ -3,7 +3,7 @@ import Section from "../atoms/Section"
 import Container from "../atoms/Container"
 import { Event } from "@/src/lib/strapi/types"
 import EventsCard from "../molecules/EventsCard"
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 import Button from "../atoms/Button"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons"
@@ -11,16 +11,24 @@ import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons"
 const EventsSection = ({events}: {events: Event[]}) => {
 
     const [currentIndex, setCurrentIndex] = useState<number>(0)
+    const eventRef = useRef<HTMLDivElement | null>(null)
+
+    useEffect(() => {
+        eventRef.current?.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        })
+    }, [currentIndex])
 
     const goToPreviousEvent = () => {
         if (currentIndex > 0) {
-            setCurrentIndex(currentIndex - 1)
+            setCurrentIndex(prevIndex => prevIndex - 1)
         }
     }
 
     const goToNextEvent = () => {
-        if (currentIndex >= 0 && currentIndex < events.length-1) {
-            setCurrentIndex(currentIndex + 1)
+        if (currentIndex < events.length-1) {
+            setCurrentIndex(prevIndex => prevIndex + 1)
         }
     }
 
@@ -42,10 +50,15 @@ const EventsSection = ({events}: {events: Event[]}) => {
         <Section bgColor="bg-fg-black">
             <Container>
                 <div className="flex flex-col items-center px-6 md:px-10 text-center">
-                    <div id="eventsListing">
+                    <div ref={eventRef} className="scroll-mt-28">
                         <EventsCard eventItem={eventItem} />
                     </div>
-                    <div className="flex flex-wrap justify-center items-center gap-6 mt-14">
+                    <div className=" w-full max-w-3xl flex flex-col items-end mt-6">
+                        <p className="text-fg-dark-gray text-xs md:text-sm lg:text-base mt-1 text-left">
+                            {currentIndex + 1}/{events.length}
+                        </p>
+                    </div>
+                    <div className="flex flex-wrap justify-center items-center gap-6 mt-8">
                         <Button
                             content={
                                 <FontAwesomeIcon icon={faArrowLeft} className="text-base md:text-xl text-gold"/>
@@ -66,6 +79,7 @@ const EventsSection = ({events}: {events: Event[]}) => {
                         />
                     </div>
                 </div>
+                
             </Container>
         </Section>
     )
