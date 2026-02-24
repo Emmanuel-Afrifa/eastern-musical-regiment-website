@@ -24,7 +24,7 @@ const BandCTASection = () => {
                     <Button
                         content="Request a Band"
                         ariaLabel="request band button"
-                        classname="button text-fg-gray border-2 border-fg-gray px-10 py-2 mt-10"
+                        classname="button text-fg-gray border-2 border-fg-gray px-10 py-3 mt-10 btn-hover"
                     />
                 </div>
             </Container>

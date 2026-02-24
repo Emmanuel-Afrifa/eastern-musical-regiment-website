@@ -51,7 +51,7 @@ const EventsSection = ({events}: {events: Event[]}) => {
                                 <FontAwesomeIcon icon={faArrowLeft} className="text-base md:text-xl text-gold"/>
                             }
                             ariaLabel="previous button"
-                            classname={`rounded-lg md:rounded-2xl px-5 py-1.5 md:px-10 md:py-3 bg-fg-black text-gold border-2 border-gold ${isLeftFinished ? "cursor-not-allowed opacity-50" : "cursor-pointer"}`}
+                            classname={`rounded-lg md:rounded-2xl px-5 py-1.5 md:px-10 md:py-3 bg-fg-black text-gold border-2 border-gold ${isLeftFinished ? "cursor-not-allowed opacity-50" : "cursor-pointer btn-hover"}`}
                             handleClick={goToPreviousEvent}
                             disabled={isLeftFinished}
                         />
@@ -60,7 +60,7 @@ const EventsSection = ({events}: {events: Event[]}) => {
                                 <FontAwesomeIcon icon={faArrowRight} className="text-base md:text-xl text-gold"/>
                             }
                             ariaLabel="next button"
-                            classname={`rounded-lg md:rounded-2xl px-5 py-1.5 md:px-10 md:py-3 bg-fg-black text-gold border-2 border-gold ${isRightFinished ? "cursor-not-allowed opacity-50" : "cursor-pointer"}`}
+                            classname={`rounded-lg md:rounded-2xl px-5 py-1.5 md:px-10 md:py-3 bg-fg-black text-gold border-2 border-gold ${isRightFinished ? "cursor-not-allowed opacity-50" : "cursor-pointer btn-hover"}`}
                             handleClick={goToNextEvent}
                             disabled={isRightFinished}
                         />
