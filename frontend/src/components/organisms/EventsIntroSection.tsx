@@ -9,7 +9,7 @@ const EventsIntroSection = () => {
                 muted
                 playsInline
                 loop
-                className="absolute inset-0 w-full h-full object-cover opacity-80"
+                className="absolute inset-0 w-full h-full object-cover opacity-80 object-[30%_30%] lg:object-center"
             >
                 <source src="/videos/events-bg-vid.mp4" type="video/mp4" />
             </video>
