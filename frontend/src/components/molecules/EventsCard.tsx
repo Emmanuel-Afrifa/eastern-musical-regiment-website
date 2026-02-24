@@ -1,10 +1,18 @@
+"use client"
 import Image from "next/image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCalendar, faLocation } from "@fortawesome/free-solid-svg-icons"
 import { Event } from "@/src/lib/strapi/types"
 import { getStrapiMedia } from "@/src/lib/strapi/events"
+import { useState, useEffect } from "react"
 
 const EventsCard = ({eventItem}: {eventItem: Event}) => {
+
+    const [showOverlay, setShowOverlay] = useState<boolean>(false)
+
+    useEffect(() => {
+        document.body.style.overflow = showOverlay ? "hidden": "auto"
+    })
 
     const date = new Date(eventItem.Date)
     const year = date.getFullYear()
@@ -30,7 +38,10 @@ const EventsCard = ({eventItem}: {eventItem: Event}) => {
 
     return (
         <div className="flex flex-col w-full max-w-3xl">
-            <div className="relative aspect-square w-full max-w-lg mx-auto rounded-2xl">
+            <div 
+                className="relative aspect-square w-full max-w-lg mx-auto rounded-2xl cursor-pointer"
+                onClick={() => setShowOverlay(true)}
+            >
                 <Image
                     src={imgSrc}
                     alt={eventItem.image.alternativeText || "event image"}
@@ -67,6 +78,22 @@ const EventsCard = ({eventItem}: {eventItem: Event}) => {
                     </a>
                 )}
             </div>
+
+            {showOverlay && (
+                <div 
+                    className="flex justify-center items-center fixed inset-0 bg-black/80 backdrop-blur-2xl z-60 px-6 md:px-16 cursor-zoom-out"
+                    onClick={() => setShowOverlay(false)}
+                >
+                    <div className="relative w-[90vw] h-[90vh] rounded-2xl">
+                        <Image
+                            src={imgSrc}
+                            alt={eventItem.image.alternativeText + "full screen" || "event image full screen"}
+                            fill 
+                            className="object-contain rounded-2xl"
+                        />
+                    </div>
+                </div>
+            )}
         </div>
     )
 }
