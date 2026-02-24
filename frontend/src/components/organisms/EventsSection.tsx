@@ -30,7 +30,7 @@ const EventsSection = ({events}: {events: Event[]}) => {
 
     if (events && events.length === 0) {
         return (
-            <section className="flex w-full bg-title-black">
+            <section className="flex w-full bg-fg-black">
                 <div className="flex flex-col justify-center items-center w-full max-w-360 mx-auto px-6 md:px-10 min-h-screen">
                     <p className="text-gold text-center text-3xl md:text-4xl">No Upcoming events found</p>
                 </div>
@@ -39,7 +39,7 @@ const EventsSection = ({events}: {events: Event[]}) => {
     }
 
     return (
-        <Section>
+        <Section bgColor="bg-fg-black">
             <Container>
                 <div className="flex flex-col items-center px-6 md:px-10 text-center">
                     <div id="eventsListing">

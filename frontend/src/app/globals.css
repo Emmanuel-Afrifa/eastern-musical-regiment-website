@@ -59,6 +59,16 @@
         min-height: 100vh;
     }
 
+    .events-bg {
+        background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("../../public/videos/events-bg-vid.mp4");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        min-height: 100dvh;
+        min-height: 100vh;
+    }
+
     .footer-bg {
         background: linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url("../../public/images/footer-bg-img.webp");
         background-repeat: no-repeat;
