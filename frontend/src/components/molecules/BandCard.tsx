@@ -6,7 +6,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons"
 import { faClose } from "@fortawesome/free-solid-svg-icons"
 import YoutubeCard from "./YoutubeCard"
-import { useToggle } from "@/src/hooks/useToggle"
 
 type BandProps = {
     id: string;
@@ -23,7 +22,7 @@ type BandProps = {
 
 const BandCard = ({bandItem}: {bandItem: BandProps}) => {
 
-    const [showOverlay, setShowOverlay] = useToggle(false)
+    const [showOverlay, setShowOverlay] = useState<boolean>(false)
     const [currentIndex, setCurrentIndex] = useState<number>(0)
 
     useEffect(() => {
@@ -44,7 +43,7 @@ const BandCard = ({bandItem}: {bandItem: BandProps}) => {
             <div className="flex flex-col xl:flex-row items-center justify-center">
                 <div 
                     className="relative aspect-video w-full md:w-3/4 lg:w-1/2 rounded-2xl cursor-pointer group overflow-hidden"
-                    onClick={setShowOverlay}
+                    onClick={() => setShowOverlay(true)}
                 >
                     <Image 
                         src={bandItem.image}
@@ -76,7 +75,7 @@ const BandCard = ({bandItem}: {bandItem: BandProps}) => {
 
             {showOverlay && (
                 <div 
-                    className="flex justify-center items-center fixed inset-0 bg-black/80 backdrop-blur-2xl z-60 cursor-zoom-out px-6 md:px-16"
+                    className="flex justify-center items-center fixed inset-0 bg-black/80 backdrop-blur-2xl z-60 px-6 md:px-16"
                 >
                     <div className="flex flex-col w-full max-w-xl xl:max-w-3xl">
                         <div className="self-center mb-8">
@@ -86,9 +85,15 @@ const BandCard = ({bandItem}: {bandItem: BandProps}) => {
                                 }
                                 ariaLabel="close button"
                                 classname="button text-gold"
-                                handleClick={setShowOverlay}
+                                handleClick={() => setShowOverlay(false)}
                             />
                         </div>
+
+                        {!hasMedia && (
+                            <div className="flex justify-center items-center my-28">
+                                <p className="text-gold text-2xl text-center">No media to preview</p>
+                            </div>
+                        )}
 
                         <div>
                             {mediaItem && (
@@ -109,26 +114,26 @@ const BandCard = ({bandItem}: {bandItem: BandProps}) => {
                             )}
                         </div>
 
-                        <div className="flex flex-wrap justify-center items-center gap-6 mt-8">
-                            <Button
-                                content={
-                                    <FontAwesomeIcon icon={faArrowLeft} size="xl" />
-                                }
-                                ariaLabel="previous button"
-                                classname="button text-gold"
-                                handleClick={() => setCurrentIndex(previousIndex)}
-                                disabled={!hasMedia}
-                            />
-                            <Button
-                                content={
-                                    <FontAwesomeIcon icon={faArrowRight} size="xl" />
-                                }
-                                ariaLabel="next button"
-                                classname="button text-gold"
-                                handleClick={() => setCurrentIndex(nextIndex)}
-                                disabled={!hasMedia}
-                            />
-                        </div>
+                        {hasMedia && (
+                                <div className="flex flex-wrap justify-center items-center gap-6 mt-8">
+                                <Button
+                                    content={
+                                        <FontAwesomeIcon icon={faArrowLeft} size="xl" />
+                                    }
+                                    ariaLabel="previous button"
+                                    classname="font-semibold text-gold cursor-pointer"
+                                    handleClick={() => setCurrentIndex(previousIndex)}
+                                />
+                                <Button
+                                    content={
+                                        <FontAwesomeIcon icon={faArrowRight} size="xl" />
+                                    }
+                                    ariaLabel="next button"
+                                    classname="font-semibold text-gold cursor-pointer"
+                                    handleClick={() => setCurrentIndex(nextIndex)}
+                                />
+                            </div>
+                        )}
                     </div>
                 </div>
             )}

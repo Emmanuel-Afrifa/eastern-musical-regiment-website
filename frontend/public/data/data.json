@@ -128,12 +128,7 @@
             "id": "01",
             "image": "/images/band-img.png",
             "bandMedia": [
-                {"src": "/images/band-img.png", "type": "image"},
-                {"src": "/images/img-3.jpg", "type": "image"},
-                {"src": "BcvKtseRi7Y", "type": "video"},
-                {"src": "/images/img-1.jpg", "type": "image"},
-                {"src": "BcvKtseRi7Y", "type": "video"},
-                {"src": "/images/img-4.jpg", "type": "image"}
+                
             ],
             "name": "EMR Senior Brass Band",
             "description": "Our flagship ensemble, performing classical and contemporary brass repertoire with precision and passion.",
