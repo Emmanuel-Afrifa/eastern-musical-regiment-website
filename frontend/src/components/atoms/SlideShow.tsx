@@ -2,12 +2,12 @@
 import { useState, useEffect, useMemo } from "react"
 import Image from "next/image"
 import { cn } from "@/src/lib/cn"
-import { useToggle } from "@/src/hooks/useToggle"
+// import { useToggle } from "@/src/hooks/useToggle"
 
 const SlideShow = () => {
 
     const [index, setIndex] = useState<number>(0)
-    const [paused, setPaused] = useToggle(false)
+    // const [paused, setPaused] = useToggle(false)
 
     const images: string[] = useMemo(() => {
         return (
@@ -24,21 +24,21 @@ const SlideShow = () => {
     }, [])
 
     useEffect(() => {
-        if (paused) return
+        // if (paused) return
 
         const interval = setInterval(() => {
             setIndex(prevIndex => (prevIndex + 1) % images.length)
-        }, 2500);
+        }, 2000);
 
         return () => clearInterval(interval)
 
-    }, [paused, index, setIndex, images])
+    }, [index, setIndex, images])
 
     return (
         <div 
-            className="relative overflow-hidden aspect-video w-full md:w-[85%] h-auto max-h-screen mx-auto md:rounded-3xl cursor-pointer"
-            onMouseEnter={setPaused}
-            onMouseLeave={setPaused}
+            className="relative overflow-hidden aspect-video w-full h-auto max-h-[95vh] mx-auto cursor-pointer"
+            // onMouseEnter={setPaused}
+            // onMouseLeave={setPaused}
         >
             {images.map((image, i) => {
                 return (
@@ -48,7 +48,7 @@ const SlideShow = () => {
                         alt="regiment performance image"
                         fill
                         className={cn(
-                            "absolute inset-0 transition-all duration-1000 object-cover w-full h-full md:rounded-3xl",
+                            "absolute inset-0 transition-all duration-1000 object-cover w-full h-full",
                             i === index ? "opacity-100" : "opacity-0"
                         )}
                     />

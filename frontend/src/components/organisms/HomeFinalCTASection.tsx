@@ -1,7 +1,6 @@
 import Section from "../atoms/Section"
 import Container from "../atoms/Container"
 import TitleSplitColors from "../atoms/TitleSplitColors"
-import Button from "../atoms/Button"
 
 const HomeFinalCTASection = () => {
     return (

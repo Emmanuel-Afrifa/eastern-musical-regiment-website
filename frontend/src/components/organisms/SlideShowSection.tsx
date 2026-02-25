@@ -4,7 +4,7 @@ import SlideShow from "../atoms/SlideShow"
 
 const SlideShowSection = () => {
     return (
-        <Section>
+        <Section classname="py-0">
             <Container>
                 <div>
                     <SlideShow/>
