@@ -8,7 +8,7 @@ export const getEvents = async () => {
             "sort": "Date:desc"
         },
         next: {
-            revalidate: 30
+            revalidate: 3600
         }
     })
 

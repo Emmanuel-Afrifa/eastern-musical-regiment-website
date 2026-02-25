@@ -1,4 +1,3 @@
-import Button from "../atoms/Button"
 import Container from "../atoms/Container"
 
 const HeroSection = () => {
@@ -24,11 +23,15 @@ const HeroSection = () => {
                         >
                             Join the Regiment
                         </a>
-                        <Button
-                            content="Request a Band"
-                            ariaLabel="request a band button"
-                            classname="button px-10 py-3 font-montserrat text-sm md:text-base 2xl:text-lg bg-fg-black text-fg-gray border-2 border-fg-gray btn-hover"
-                        />
+                        <a
+                            href="https://forms.gle/vQjddpKKPpGrGD6s8"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="button px-10 py-3 font-montserrat text-sm md:text-base 2xl:text-lg bg-fg-black text-fg-gray border-2 border-fg-gray btn-hover"
+                            aria-label="request a band link"
+                        >
+                            Request a Band
+                        </a>
                     </div>
                 </div>
             </Container>

@@ -21,11 +21,20 @@ const BandCTASection = () => {
                     <p className="text-fg-gray mt-6 text-center section-description-text">
                         Reach out today and let us help you create a performance worth remembering.
                     </p>
-                    <Button
+                                        <a
+                        href="https://forms.gle/vQjddpKKPpGrGD6s8"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="button text-fg-gray inline-block border-2 border-fg-gray px-10 py-3 mt-10 btn-hover"
+                        aria-label="request band link"
+                    >
+                        Request a Band
+                    </a>
+                    {/* <Button
                         content="Request a Band"
                         ariaLabel="request band button"
                         classname="button text-fg-gray border-2 border-fg-gray px-10 py-3 mt-10 btn-hover"
-                    />
+                    /> */}
                 </div>
             </Container>
         </Section>

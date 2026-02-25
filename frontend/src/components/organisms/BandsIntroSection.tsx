@@ -1,6 +1,5 @@
 import Section from "../atoms/Section"
 import Container from "../atoms/Container"
-import Button from "../atoms/Button"
 import TitleSplitColors from "../atoms/TitleSplitColors"
 
 const BandsIntroSection = () => {
@@ -16,11 +15,15 @@ const BandsIntroSection = () => {
                         Discover the diverse ensembles that make up the Eastern Musical Regiment 
                         family, each bringing unique talents and musical traditions.
                     </p>
-                    <Button
-                        content="Request a Band"
-                        ariaLabel="request band button"
-                        classname="button text-fg-gray border-2 border-fg-gray px-10 py-3 mt-10 btn-hover"
-                    />
+                    <a
+                        href="https://forms.gle/vQjddpKKPpGrGD6s8"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="button text-fg-gray inline-block border-2 border-fg-gray px-10 py-3 mt-10 btn-hover"
+                        aria-label="request a band link"
+                    >
+                        Request a Band
+                    </a>
                 </div>
             </Container>
         </Section>
