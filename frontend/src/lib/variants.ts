@@ -49,10 +49,10 @@ export const scaleDown: Variants = {
     }}
 }
 
-export const skewUp: Variants = {
-    hidden: { opacity: 0, skewY: 20, scale:0.95},
-    visible: {opacity: 1, skewY: 0, scale: 1, transition: {
-        duration: 0.3, ease: "easeIn"
+export const openUp: Variants = {
+    hidden: { opacity: 0, rotateX: 90, y: 20, filter: "blur(10px)"},
+    visible: {opacity: 1, rotateX: 0, y: 0, filter: "blur(0px)", transition: {
+        duration: 1, ease: "easeOut"
     }}
 }
 

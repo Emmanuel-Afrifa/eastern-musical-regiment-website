@@ -1,7 +1,7 @@
 "use client"
 import Container from "../atoms/Container"
 import { motion } from "framer-motion"
-import { staggerContainer, blurScale, fadeLeft, fadeRight } from "@/src/lib/variants"
+import { staggerContainer, blurScale, openUp, fadeLeft, fadeRight } from "@/src/lib/variants"
 
 const HeroSection = () => {
     return (
@@ -16,7 +16,8 @@ const HeroSection = () => {
                 >
                     <motion.h1 
                         className="text-white text-4xl md:text-6xl xl:text-8xl 2xl:text-9xl text-center mb-8 md:mb-10 2xl:mb-16"
-                        variants={blurScale}
+                        variants={openUp}
+                        style={{transformPerspective: 1000}}
                     >
                         Where Rhythm <br />
                         <span className="text-gold">Meets Culture</span>

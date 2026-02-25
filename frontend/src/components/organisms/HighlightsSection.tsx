@@ -3,7 +3,7 @@ import Section from "../atoms/Section"
 import Container from "../atoms/Container"
 import YoutubeCard from "../molecules/YoutubeCard"
 import { motion } from "framer-motion"
-import { staggerContainer, scaleUp, blurScale, fadeUp } from "@/src/lib/variants"
+import { staggerContainer, scaleUp, fadeUp } from "@/src/lib/variants"
 
 const HighlightsSection = () => {
 
@@ -29,11 +29,11 @@ const HighlightsSection = () => {
                     initial="hidden"
                 >
                     <motion.h2 
-                        className="text-fg-fade-white section-header-text mb-6 text-center"
-                        variants={blurScale}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{once: true, amount: 0.3}}
+                        className="overflow-hidden whitespace-nowrap text-fg-fade-white section-header-text mb-6 text-center py-1"
+                        initial={{width: 0}}
+                        whileInView={{ width: "100%"}}
+                        transition={{duration: 2, ease: "easeInOut"}}
+                        viewport={{once: true}}
                     >
                         Recent Highlights
                     </motion.h2>
