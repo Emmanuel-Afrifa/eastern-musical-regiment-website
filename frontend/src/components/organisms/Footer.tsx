@@ -20,7 +20,7 @@ const Footer = () => {
     ]
 
     return (
-        <footer className="w-full center bg-fg-black py-28 footer-bg">
+        <footer className="w-full center bg-fg-black py-28">
             <Container>
                 <div className="flex flex-col px-6 md:px-10 lg:px-30">
                     <div className="flex flex-col">

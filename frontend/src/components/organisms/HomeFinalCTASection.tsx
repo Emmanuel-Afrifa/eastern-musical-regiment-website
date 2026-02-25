@@ -7,7 +7,7 @@ import { staggerContainer, spinScaleSide, blurScale, fadeUp } from "@/src/lib/va
 
 const HomeFinalCTASection = () => {
     return (
-        <Section>
+        <Section classname="band-bg-parallax">
             <Container>
                 <motion.div 
                     className="flex flex-col items-center"
