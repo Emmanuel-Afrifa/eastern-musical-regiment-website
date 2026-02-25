@@ -3,7 +3,7 @@ import Section from "../atoms/Section"
 import Container from "../atoms/Container"
 import TitleSplitColors from "../atoms/TitleSplitColors"
 import { motion } from "framer-motion"
-import { staggerContainer, spinScaleUp, blurScale, fadeUp } from "@/src/lib/variants"
+import { staggerContainer, spinScaleSide, blurScale, fadeUp } from "@/src/lib/variants"
 
 const HomeFinalCTASection = () => {
     return (
@@ -42,7 +42,7 @@ const HomeFinalCTASection = () => {
                         rel="noopener noreferrer"
                         className="button bg-gold font-montserrat px-10 py-3 text-sm md:text-base 2xl:text-lg text-fg-black border-2 border-transparent mt-12 btn-hover"
                         aria-label="join the regiment today button"
-                        variants={spinScaleUp}
+                        variants={spinScaleSide}
                         initial="hidden"
                         whileInView="visible"
                         viewport={{once: true}}

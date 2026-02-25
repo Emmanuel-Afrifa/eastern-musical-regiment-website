@@ -15,16 +15,16 @@ export const fadeDown: Variants = {
 }
     
 export const fadeLeft: Variants = {
-    hidden: {opacity: 0, x: -20},
-    visible: {opacity: 1, x: 0, transition: {
-        duration: 1
+    hidden: {opacity: 0, x: -20, scale: 0.8},
+    visible: {opacity: 1, x: 0, scale: 1, transition: {
+        duration: 0.05, ease: "easeIn"
     }}
 }
 
 export const fadeRight: Variants = {
-    hidden: {opacity: 0, x: 20},
-    visible: {opacity: 1, x: 0, transition: {
-        duration: 1
+    hidden: {opacity: 0, x: 20, scale: 0.8},
+    visible: {opacity: 1, x: 0, scale: 1, transition: {
+        duration: 0.05, ease: "easeIn"
     }}
 }
 
@@ -49,6 +49,13 @@ export const scaleDown: Variants = {
     }}
 }
 
+export const skewUp: Variants = {
+    hidden: { opacity: 0, skewY: 20, scale:0.95},
+    visible: {opacity: 1, skewY: 0, scale: 1, transition: {
+        duration: 0.3, ease: "easeIn"
+    }}
+}
+
 export const blurScale: Variants = {
     hidden: {opacity: 0, filter: "blur(10px)", scale: 0.5},
     visible: {opacity: 1, filter: "blur(0px)", scale: 1, transition: {
@@ -56,7 +63,7 @@ export const blurScale: Variants = {
     }}
 }
 
-export const spinScaleUp: Variants = {
+export const spinScaleSide: Variants = {
     hidden: {opacity: 0, scale: 0.7, rotateY: 360},
     visible: {opacity: 1, scale: 1, rotateY: 0, transition: {
         duration: 0.6, ease: "easeInOut"
