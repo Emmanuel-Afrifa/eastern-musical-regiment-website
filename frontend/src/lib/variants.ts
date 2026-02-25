@@ -57,9 +57,9 @@ export const blurScale: Variants = {
 }
 
 export const spinScaleUp: Variants = {
-    hidden: {opacity: 0, scale: 0.5, rotate: 360},
-    visible: {opacity: 1, scale: 1, rotate:0, transition: {
-        duration: 3, ease: "easeInOut"
+    hidden: {opacity: 0, scale: 0.7, rotateY: 360},
+    visible: {opacity: 1, scale: 1, rotateY: 0, transition: {
+        duration: 0.6, ease: "easeInOut"
     }}
 }
 
