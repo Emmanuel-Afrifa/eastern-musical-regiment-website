@@ -18,11 +18,15 @@ const HomeFinalCTASection = () => {
                         Whether you&apos;re an experienced musician or just starting your journey, 
                         there&apos;s a place for you in the Eastern Musical Regiment family.
                     </p>
-                    <Button
-                        content="Join the Regiment Today"
-                        ariaLabel="join the regiment today button"
-                        classname="button bg-gold font-montserrat px-10 py-3 text-sm md:text-base 2xl:text-lg text-fg-black border-2 border-transparent mt-12 btn-hover"
-                    />
+                    <a
+                        href="https://forms.gle/iCQtqZY2sEUtLZCt5"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="button bg-gold font-montserrat px-10 py-3 text-sm md:text-base 2xl:text-lg text-fg-black border-2 border-transparent mt-12 btn-hover"
+                        aria-label="join the regiment today button"
+                    >
+                        Join the Regiment Today
+                    </a>
                 </div>
             </Container>
         </Section>
