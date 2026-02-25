@@ -1,6 +1,9 @@
+"use client"
 import Section from "../atoms/Section"
 import Container from "../atoms/Container"
 import YoutubeCard from "../molecules/YoutubeCard"
+import { motion } from "framer-motion"
+import { staggerContainer, scaleUp, blurScale, fadeUp } from "@/src/lib/variants"
 
 const HighlightsSection = () => {
 
@@ -20,29 +23,49 @@ const HighlightsSection = () => {
     return (
         <Section bgColor="bg-fg-black">
             <Container>
-                <div className="flex flex-col items-center">
-                    <h2 className="text-fg-fade-white section-header-text mb-6 text-center">
+                <motion.div 
+                    className="flex flex-col items-center"
+                    variants={staggerContainer}
+                    initial="hidden"
+                >
+                    <motion.h2 
+                        className="text-fg-fade-white section-header-text mb-6 text-center"
+                        variants={blurScale}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{once: true, amount: 0.3}}
+                    >
                         Recent Highlights
-                    </h2>
-                    <p className="text-fg-fade-white mb-16 px-4 text-base lg:text-lg text-center">
+                    </motion.h2>
+                    <motion.p 
+                        className="text-fg-fade-white mb-16 px-4 text-base lg:text-lg text-center"
+                        variants={fadeUp}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{once: true, amount: 0.3}}
+                    >
                         Experience the energy and artistry of our performances in some of our  most recent activities
-                    </p>
+                    </motion.p>
                     <div className="flex flex-wrap gap-16 xl:gap-10 justify-center">
-                        {highlightVideos.map(video => {
+                        {highlightVideos.map((video) => {
                             return (
-                                <div 
+                                <motion.div 
                                     key={video.id}
                                     className="w-full max-w-xl flex flex-col items-center px-4 mb-5 lg:mb-8"
+                                    variants={scaleUp}
+                                    initial="hidden"
+                                    whileInView="visible"
+                                    viewport={{once: true, amount: 0.45}}
                                 >
                                     <div className="w-full rounded-2xl md:rounded-4xl border border-gold/40 ">
                                         <YoutubeCard videoId={video.videoId}/>
                                     </div>
                                     <p className="text-xl md:text-2xl lg:text-3xl text-center text-white mt-4">{video.eventName}</p>
-                                </div>
+                                </motion.div>
                             )
                         })}
                     </div>
-                </div>
+                </motion.div>
             </Container>
         </Section>
     )

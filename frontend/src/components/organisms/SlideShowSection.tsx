@@ -13,12 +13,13 @@ const SlideShowSection = () => {
                     initial="hidden"
                     whileInView="visible"
                     variants={staggerContainer}
-                    viewport={{once: false, amount: 0.5}}
+                    viewport={{once: true, amount: 0.7}}
                 >
                     <motion.div
                         initial={{opacity: 0, scale: 0.3}}
                         whileInView={{opacity: 1, scale: 1}}
                         transition={{duration: 1, ease: "easeInOut"}}
+                        viewport={{once: true}}
                     >
                         <SlideShow/>
                     </motion.div>
