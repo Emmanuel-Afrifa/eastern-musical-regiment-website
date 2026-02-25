@@ -1,7 +1,7 @@
 "use client"
 import Container from "../atoms/Container"
 import { motion } from "framer-motion"
-import { staggerContainer, blurScale, openUp, fadeLeft, fadeRight } from "@/src/lib/variants"
+import { staggerContainer, blurScale, openUp } from "@/src/lib/variants"
 
 const HeroSection = () => {
     return (
@@ -36,7 +36,9 @@ const HeroSection = () => {
                             rel="noopener noreferrer"
                             className="bg-gold border-2 border-transparent button inline-block font-montserrat px-10 py-3 text-sm md:text-base 2xl:text-lg text-fg-black btn-hover btn-gold"
                             aria-label="join regiment link"
-                            variants={fadeLeft}
+                            initial={{opacity: 0, x: -20, scale: 0.8}}
+                            animate={{opacity: 1, x: 0, scale: 1}}
+                            transition={{duration: 0.1, ease: "easeInOut", delay: 2.1}}
                         >
                             Join the Regiment
                         </motion.a>
@@ -46,7 +48,9 @@ const HeroSection = () => {
                             rel="noopener noreferrer"
                             className="button px-10 py-3 font-montserrat text-sm md:text-base 2xl:text-lg bg-fg-black text-fg-gray border-2 border-fg-gray btn-hover"
                             aria-label="request a band link"
-                            variants={fadeRight}
+                            initial={{opacity: 0, x: 20, scale: 0.8}}
+                            animate={{opacity: 1, x: 0, scale: 1}}
+                            transition={{duration: 0.1, ease: "easeInOut", delay: 2.8}}
                         >
                             Request a Band
                         </motion.a>

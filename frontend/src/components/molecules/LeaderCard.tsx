@@ -50,11 +50,11 @@ const LeaderCard = ({leaderInfo}: {leaderInfo: LeaderProps}) => {
                     className="object-cover w-full h-full rounded-t-2xl group-hover:scale-110 transition-all duration-700 group-hover:opacity-70"
                 />
             </div>
-            <div className="p-6">
+            <div className="p-4 md:p-6">
                 <h3 className="text-white text-lg md:text-xl mb-5">{leaderInfo.name}</h3>
                 <p className="text-gold text-base md:text-lg mb-5">{leaderInfo.role}</p>
                 <p className="text-fg-dark-gray text-xs md:text-sm lg:text-base mb-5">{leaderInfo.bio}</p>
-                <div className="flex gap-3 flex-wrap">
+                <div className="flex gap-2 md:gap-3 flex-wrap">
                     {leaderInfo.phone && (
                         <a 
                             href={`tel:${leaderInfo.phone}`}

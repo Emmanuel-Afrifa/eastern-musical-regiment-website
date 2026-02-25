@@ -29,7 +29,7 @@ const HighlightsSection = () => {
                     initial="hidden"
                 >
                     <motion.h2 
-                        className="overflow-hidden whitespace-nowrap text-fg-fade-white section-header-text mb-6 text-center py-1"
+                        className="overflow-hidden whitespace-nowrap text-fg-fade-white section-header-text mb-6 text-center py-1.5"
                         initial={{width: 0}}
                         whileInView={{ width: "100%"}}
                         transition={{duration: 2, ease: "easeInOut"}}

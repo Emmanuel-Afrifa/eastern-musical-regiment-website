@@ -1,3 +1,7 @@
+"use client"
+import { motion } from "framer-motion"
+import { staggerContainer, fadeLeft, fadeRight } from "@/src/lib/variants"
+
 type TimelineProps = {
     timelineDetails: {
         id: string;
@@ -18,11 +22,21 @@ const TimelineItem = ({timelineDetails, index}: TimelineProps) => {
             <div
                 className={`${isLeft ? "md:col-start-1 md:text-right": "md:col-start-2 md:text-left"}`}
             >
-                <div className={`flex flex-col items-center ${isLeft ? "md:flex-row-reverse": "md:flex-row"}`}>
+                <motion.div 
+                    className={`flex flex-col items-center ${isLeft ? "md:flex-row-reverse": "md:flex-row"}`}
+                    variants={staggerContainer}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{once: false, amount: 0.65}}
+                >
                     <div className={`hidden md:flex justify-center ${isLeft ? "md:translate-x-1/2" : "md:-translate-x-1/2"}`}>
                         <div className="w-4 h-4 rounded-full bg-gold z-5"></div>
                     </div>
-                    <div className={`${isLeft ? "md:mr-5 lg:mr-10" : "md:ml-5 lg:ml-10"}`}>
+                    <motion.div 
+                        className={`${isLeft ? "md:mr-5 lg:mr-10" : "md:ml-5 lg:ml-10"}`}
+                        variants={isLeft ? fadeLeft : fadeRight}
+                        transition={{duration: 1}}
+                    >
                         <p className="text-base lg:text-lg">
                             <span className="inline-block px-6 py-1 rounded-full bg-gold text-fg-black font-semibold">
                                 {timelineDetails.year}
@@ -34,10 +48,10 @@ const TimelineItem = ({timelineDetails, index}: TimelineProps) => {
                         <p className="text-fg-gray text-sm md:text-base lg:text-lg mb-6 md:mb-0">
                             {timelineDetails.description}
                         </p>
-                    </div>
+                    </motion.div>
 
                     <div className="md:hidden block w-full h-0.5 bg-fg-gray/20"></div>
-                </div>
+                </motion.div>
             </div>
 
             {/* Center Circle */}

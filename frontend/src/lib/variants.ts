@@ -17,14 +17,14 @@ export const fadeDown: Variants = {
 export const fadeLeft: Variants = {
     hidden: {opacity: 0, x: -20, scale: 0.8},
     visible: {opacity: 1, x: 0, scale: 1, transition: {
-        duration: 0.05, ease: "easeIn"
+        duration: 0.6, ease: "easeIn"
     }}
 }
 
 export const fadeRight: Variants = {
     hidden: {opacity: 0, x: 20, scale: 0.8},
     visible: {opacity: 1, x: 0, scale: 1, transition: {
-        duration: 0.05, ease: "easeIn"
+        duration: 0.6, ease: "easeIn"
     }}
 }
 
@@ -66,7 +66,7 @@ export const blurScale: Variants = {
 export const spinScaleSide: Variants = {
     hidden: {opacity: 0, scale: 0.7, rotateY: 360},
     visible: {opacity: 1, scale: 1, rotateY: 0, transition: {
-        duration: 0.6, ease: "easeInOut"
+        duration: 1, ease: "easeInOut"
     }}
 }
 
