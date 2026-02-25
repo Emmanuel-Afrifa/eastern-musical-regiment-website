@@ -15,11 +15,15 @@ const HeroSection = () => {
                         excellence and cultural heritage through brass, wind and percussion
                     </p>
                     <div className="flex flex-wrap justify-center gap-6">
-                        <Button
-                            content="Join the Regiment"
-                            ariaLabel="join button"
-                            classname="button bg-gold font-montserrat px-10 py-3 text-sm md:text-base 2xl:text-lg text-fg-black btn-hover btn-gold "
-                        />
+                        <a
+                            href="https://forms.gle/iCQtqZY2sEUtLZCt5"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-gold border-2 border-transparent button inline-block font-montserrat px-10 py-3 text-sm md:text-base 2xl:text-lg text-fg-black btn-hover btn-gold"
+                            aria-label="join regiment link"
+                        >
+                            Join the Regiment
+                        </a>
                         <Button
                             content="Request a Band"
                             ariaLabel="request a band button"

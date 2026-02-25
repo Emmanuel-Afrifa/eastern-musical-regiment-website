@@ -3,7 +3,7 @@ import Section from "../atoms/Section"
 import Container from "../atoms/Container"
 import { Event } from "@/src/lib/strapi/types"
 import EventsCard from "../molecules/EventsCard"
-import { useState, useRef, useEffect } from "react"
+import { useState, useRef } from "react"
 import Button from "../atoms/Button"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons"
@@ -13,22 +13,26 @@ const EventsSection = ({events}: {events: Event[]}) => {
     const [currentIndex, setCurrentIndex] = useState<number>(0)
     const eventRef = useRef<HTMLDivElement | null>(null)
 
-    useEffect(() => {
+    const scrollToTop = () => {
         eventRef.current?.scrollIntoView({
             behavior: "smooth",
             block: "start"
         })
-    }, [currentIndex])
+    }
 
     const goToPreviousEvent = () => {
         if (currentIndex > 0) {
             setCurrentIndex(prevIndex => prevIndex - 1)
+            console.log(`Clicked Previous ${currentIndex}`)
+            requestAnimationFrame(scrollToTop)
         }
     }
 
     const goToNextEvent = () => {
         if (currentIndex < events.length-1) {
             setCurrentIndex(prevIndex => prevIndex + 1)
+            console.log(`Clicked Next ${currentIndex}`)
+            requestAnimationFrame(scrollToTop)
         }
     }
 
@@ -49,7 +53,7 @@ const EventsSection = ({events}: {events: Event[]}) => {
     return (
         <Section bgColor="bg-fg-black">
             <Container>
-                <div className="flex flex-col items-center px-6 md:px-10 text-center">
+                <div id="events-listing" className="flex flex-col items-center px-6 md:px-10 text-center">
                     <div ref={eventRef} className="scroll-mt-28">
                         <EventsCard eventItem={eventItem} />
                     </div>
