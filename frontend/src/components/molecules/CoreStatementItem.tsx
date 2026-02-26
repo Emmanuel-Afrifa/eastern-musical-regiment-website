@@ -13,7 +13,7 @@ const CoreStatementItem = ({statement}: {statement: StatementProp[]}) => {
 
     return (
         <div 
-            className="w-full max-w-lg flex h-fit flex-col p-6 md:p-10 bg-bg-black rounded-3xl cursor-pointer"
+            className="w-full max-w-lg flex h-fit flex-col p-6 md:p-10 bg-bg-black rounded-3xl"
         >
             <div className="flex gap-8">
                 {itemsArray.map((itemIndex) => {
@@ -21,7 +21,7 @@ const CoreStatementItem = ({statement}: {statement: StatementProp[]}) => {
                         <div 
                             key={itemIndex} 
                             onClick={() => setSelectedIndex(itemIndex)}
-                            className={`flex justify-center items-center w-14 h-14 rounded-xl ${itemIndex === selectedIndex ? "bg-bg-dark-gold" : "bg-gray-700"}  mb-10 md:mb-12`}
+                            className={`flex justify-center items-center w-14 h-14 rounded-xl cursor-pointer ${itemIndex === selectedIndex ? "bg-bg-dark-gold" : "bg-gray-700"}  mb-10 md:mb-12`}
                         >
                             <div className={`w-5 h-5 rounded-full border-2 ${itemIndex === selectedIndex ? "bg-gold border-transparent" : "bg-transparent border-white"}`}></div>
                         </div>

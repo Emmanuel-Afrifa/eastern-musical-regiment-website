@@ -21,6 +21,26 @@
     }
 }
 
+@keyframes textReveal {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes lineReveal {
+    0% {
+        transform: scaleX(0);
+        opacity: 0;
+    }   
+    100% {
+        transform: scaleX(100%);
+        opacity: 1;
+    }
+}
+
 @theme inline {
     --color-gold: var(--gold);
     --color-fg-black: var(--fg-black);
@@ -32,6 +52,8 @@
     --font-inter: var(--font-inter);
     --font-montserrat: var(--font-montserrat);
     --animate-bump: bumping 4s linear infinite;
+    --animate-text-reveal: textReveal 2s ease;
+    --animate-line-reveal: lineReveal 3s forwards 1.5s;
 }
 
 @layer base {
