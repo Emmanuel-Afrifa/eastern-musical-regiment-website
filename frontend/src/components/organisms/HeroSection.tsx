@@ -15,7 +15,7 @@ const HeroSection = () => {
                     viewport={{once: true}}
                 >
                     <motion.h1 
-                        className="text-white text-4xl md:text-6xl xl:text-8xl 2xl:text-9xl text-center mb-8 md:mb-10 2xl:mb-16"
+                        className="text-white text-4xl md:text-6xl xl:text-[80px] 2xl:text-9xl text-center mb-8 md:mb-10 2xl:mb-16"
                         variants={openUp}
                         style={{transformPerspective: 1000}}
                     >

@@ -9,7 +9,7 @@ import saxImg from "../../../public/images/sax-img-bg.jpg"
 
 const BandsIntroSection = () => {
     return (
-        <Section classname="h-screen 2xl:h-auto 2xl:py-70 bg-gold/50">
+        <Section classname="h-screen 2xl:h-auto 2xl:py-70 relative">
             <Container>
                 <motion.div 
                     className="flex flex-col items-center px-6 md:px-10 text-center"
@@ -18,7 +18,7 @@ const BandsIntroSection = () => {
                     whileInView="visible"
                     viewport={{once: true}}
                 >
-                    <div className="absolute inset-0 w-full xl:w-[85vw] h-screen rounded-br-full z-2 overflow-hidden opacity-25">
+                    <div className="absolute inset-0 w-full xl:w-[85vw] h-screen rounded-br-full z-2 overflow-hidden opacity-20">
                         <div className="relative aspect-video w-full h-full">
                                 <Image
                                 src={saxImg}

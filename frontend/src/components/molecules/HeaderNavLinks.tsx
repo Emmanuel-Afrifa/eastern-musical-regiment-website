@@ -1,7 +1,7 @@
 "use client"
 import Button from "../atoms/Button"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faBars, faWindowClose } from "@fortawesome/free-solid-svg-icons"
+import { faBars, faClose } from "@fortawesome/free-solid-svg-icons"
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
@@ -58,13 +58,13 @@ const HeaderNavLinks = () => {
             <ul 
                 className={`${openNavbar ? "flex" : "hidden"} pl-10 pt-10 pb-28 
                     lg:flex flex-col lg:flex-row gap-5 fixed inset-0 lg:sticky z-60 cursor-pointer
-                    backdrop-blur-3xl bg-fg-black/70 w-full lg:px-10 lg:py-2 lg:rounded-full lg:bg-fg-fade-white/40`}
+                    backdrop-blur-3xl bg-fg-black/70 w-[70vw] lg:w-full lg:px-10 lg:py-2 lg:rounded-full lg:bg-fg-fade-white/40`}
                 // onClick={toggleOpenNavbar}
             >
                 <Button
                     content={
                         <div className="h-10 w-10 bg-gold rounded-full flex justify-center items-center animate-bump">
-                            <FontAwesomeIcon icon={faWindowClose} className="bg-gold/70 text-xl" />
+                            <FontAwesomeIcon icon={faClose} className="bg-gold/70 text-xl" />
                         </div>  
                     }
                     ariaLabel="navbar close button"
@@ -90,7 +90,9 @@ const HeaderNavLinks = () => {
                     )
                 })}
             </ul>
-
+            {openNavbar && (
+                <div className="fixed inset-0 w-full h-screen bg-bg-black/70 z-45"></div>
+            )}
         </div>
     )
 }
