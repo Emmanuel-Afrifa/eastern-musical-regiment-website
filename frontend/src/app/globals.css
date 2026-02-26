@@ -118,5 +118,14 @@
                 hover:bg-bg-black hover:shadow-[0_0_15px_#eea60c94];
     }
 
+    .intro-bg-design {
+        @apply after:content-[''] after:xl:w-[85vw] after:w-full after:h-screen after:rounded-br-full after:absolute after:inset-0 after:bg-linear-to-b after:backdrop-blur-3xl
+                after:to-gold/10 after:opacity-40  after:from-gold z-5       
+    }
+
+    .custom-text-shadow {
+        text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+    }
+
 }
 

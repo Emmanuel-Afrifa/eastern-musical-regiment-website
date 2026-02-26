@@ -4,10 +4,12 @@ import Container from "../atoms/Container"
 import TitleSplitColors from "../atoms/TitleSplitColors"
 import { motion } from "framer-motion"
 import { staggerContainer, blurScale, fadeUp } from "@/src/lib/variants"
+import Image from "next/image"
+import trumpetImg from "../../../public/images/trumpet-img-bg.jpg"
 
 const AboutIntroSection = () => {
     return (
-        <Section classname="h-screen 2xl:h-auto 2xl:py-70">
+        <Section classname="h-screen 2xl:h-auto 2xl:py-70 intro-bg-design relative">
             <Container>
                 <motion.div 
                     className="flex flex-col items-center px-6 md:px-10 text-center"
@@ -16,16 +18,31 @@ const AboutIntroSection = () => {
                     whileInView="visible"
                     viewport={{once: true}}
                 >
+                    <div className="absolute inset-0 w-full xl:w-[85vw] h-screen rounded-br-full z-0 overflow-hidden opacity-35">
+                       <div className="relative aspect-video w-full h-full">
+                             <Image
+                                src={trumpetImg}
+                                alt="trumper image"
+                                fill
+                                className="w-full h-full object-cover"
+                            />
+                       </div>
+                    </div>
+
+
                     <motion.div
                         variants={blurScale}
+                        className="z-8"
                     >
                         <TitleSplitColors
                             firstTitle="Building a Musical"
                             secondTitle="Legacy Together"
+                            secondColor="text-white"
+                            classname="custom-text-shadow"
                         />
                     </motion.div>
                     <motion.p 
-                        className="text-fg-gray mt-8 lg:mt-14 text-center section-description-text"
+                        className="text-white z-8 mt-8 lg:mt-14 text-center section-description-text"
                         variants={fadeUp}    
                     >
                         For nearly three decades, the Eastern Musical Regiment has been at the 

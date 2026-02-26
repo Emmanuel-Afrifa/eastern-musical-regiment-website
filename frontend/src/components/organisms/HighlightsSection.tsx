@@ -57,7 +57,7 @@ const HighlightsSection = () => {
                                     whileInView="visible"
                                     viewport={{once: true, amount: 0.45}}
                                 >
-                                    <div className="w-full rounded-2xl md:rounded-4xl border border-gold/40 ">
+                                    <div className="w-full rounded-2xl md:rounded-4xl border-2 border-gold/50 ">
                                         <YoutubeCard videoId={video.videoId}/>
                                     </div>
                                     <p className="text-xl md:text-2xl lg:text-3xl text-center text-white mt-4">{video.eventName}</p>
