@@ -14,6 +14,12 @@ All assets are used in accordance with their respective licenses.
 - Source: Unsplash (https://unsplash.com)
 - Photographer: Hal Gatewood
 - Image URL: https://unsplash.com/photos/gold-colored-trombone-4M-SloLmUHg
+- License: Unsplash License (Free for commercial use, no attribution required)#
+
+#### Band Intro Section Background
+- Source: Unsplash (https://unsplash.com)
+- Photographer: engin akyurt
+- Image URL: https://unsplash.com/photos/silver-tube-on-black-textile-1E-PFrorFUA
 - License: Unsplash License (Free for commercial use, no attribution required)
 
 ---
