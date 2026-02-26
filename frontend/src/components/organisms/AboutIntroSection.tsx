@@ -18,7 +18,7 @@ const AboutIntroSection = () => {
                     whileInView="visible"
                     viewport={{once: true}}
                 >
-                    <div className="absolute inset-0 w-full xl:w-[85vw] h-screen rounded-br-full z-0 overflow-hidden opacity-35">
+                    <div className="absolute inset-0 w-full xl:w-[85vw] 2xl:max-h-205 h-screen rounded-br-full z-0 overflow-hidden opacity-35">
                        <div className="relative aspect-video w-full h-full">
                              <Image
                                 src={trumpetImg}

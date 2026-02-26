@@ -18,7 +18,7 @@ const BandsIntroSection = () => {
                     whileInView="visible"
                     viewport={{once: true}}
                 >
-                    <div className="absolute inset-0 w-full xl:w-[85vw] h-screen rounded-br-full z-2 overflow-hidden opacity-20">
+                    <div className="absolute inset-0 w-full xl:w-[85vw] 2xl:max-h-[910] h-screen rounded-br-full z-2 overflow-hidden opacity-20">
                         <div className="relative aspect-video w-full h-full">
                                 <Image
                                 src={saxImg}

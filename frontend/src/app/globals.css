@@ -119,7 +119,7 @@
     }
 
     .intro-bg-design {
-        @apply after:content-[''] after:xl:w-[85vw] after:w-full after:h-screen after:rounded-br-full after:absolute after:inset-0 after:bg-linear-to-b after:backdrop-blur-3xl
+        @apply after:content-[''] after:xl:w-[85vw] after:2xl:max-h-205 after:w-full after:h-screen after:rounded-br-full after:absolute after:inset-0 after:bg-linear-to-b after:backdrop-blur-3xl
                 after:to-gold/10 after:opacity-40  after:from-gold z-5       
     }
 
