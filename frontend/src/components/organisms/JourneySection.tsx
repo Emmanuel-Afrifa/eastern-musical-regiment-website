@@ -38,7 +38,7 @@ const JourneySection = () => {
                     </motion.p>
                 </motion.div>
                 <div 
-                    className="relative w-full px-4 md:px-6 lg:px-10"
+                    className="relative w-full px-6 lg:px-10"
                 >
                     {/* Vertical Line */}
                     <div

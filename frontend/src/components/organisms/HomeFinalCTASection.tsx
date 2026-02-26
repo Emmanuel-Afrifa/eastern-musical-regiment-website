@@ -10,7 +10,7 @@ const HomeFinalCTASection = () => {
         <Section classname="band-bg-parallax">
             <Container>
                 <motion.div 
-                    className="flex flex-col items-center"
+                    className="flex flex-col items-center md:px-15"
                     initial="hidden"
                     variants={staggerContainer}
                 >
@@ -27,7 +27,7 @@ const HomeFinalCTASection = () => {
                         />
                     </motion.div>
                     <motion.p 
-                        className="text-fg-gray section-description-text mt-12 text-center px-4"
+                        className="text-fg-gray section-description-text mt-12 text-center px-6"
                         variants={fadeUp}
                         initial="hidden"
                         whileInView="visible"

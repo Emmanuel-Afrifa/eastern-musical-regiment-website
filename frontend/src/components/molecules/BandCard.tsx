@@ -75,7 +75,7 @@ const BandCard = ({bandItem}: {bandItem: BandProps}) => {
 
             {showOverlay && (
                 <div 
-                    className="flex justify-center items-center fixed inset-0 bg-black/80 backdrop-blur-2xl z-60 px-6 md:px-16"
+                    className="flex justify-center items-center fixed inset-0 bg-black/80 backdrop-blur-2xl z-60 px-2 md:px-16"
                 >
                     <div className="flex flex-col w-full max-w-xl xl:max-w-3xl">
                         <div className="self-center mb-8">

@@ -23,7 +23,7 @@ const HeroSection = () => {
                         <span className="text-gold">Meets Culture</span>
                     </motion.h1>
                     <motion.p 
-                        className="font-montserrat text-base md:text-lg 2xl:xl text-white max-w-[55ch] text-center mb-8 md:mb-10 2xl:mb-16"
+                        className="font-montserrat text-base md:text-lg 2xl:xl text-white max-w-[55ch] text-center mb-8 md:mb-10 2xl:mb-16 px-6 md:px-15"
                         variants={blurScale}
                     >
                         Join the Eastern Musical Regiment. A vibrant community celebrating musical 

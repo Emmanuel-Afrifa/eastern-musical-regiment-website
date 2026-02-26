@@ -24,7 +24,7 @@ const HighlightsSection = () => {
         <Section bgColor="bg-fg-black">
             <Container>
                 <motion.div 
-                    className="flex flex-col items-center"
+                    className="flex flex-col items-center md:px-15"
                     variants={staggerContainer}
                     initial="hidden"
                 >
@@ -38,7 +38,7 @@ const HighlightsSection = () => {
                         Recent Highlights
                     </motion.h2>
                     <motion.p 
-                        className="text-fg-fade-white mb-16 px-4 text-base lg:text-lg text-center"
+                        className="text-fg-fade-white mb-16 px-7 text-base lg:text-lg text-center"
                         variants={fadeUp}
                         initial="hidden"
                         whileInView="visible"

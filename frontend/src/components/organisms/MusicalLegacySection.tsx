@@ -14,7 +14,7 @@ const MusicalLegacySection = () => {
         <Section>
             <Container>
                 <motion.div 
-                    className="flex flex-col px-8 md:px-15"
+                    className="flex flex-col px-7 md:px-15"
                     variants={staggerContainer}
                     initial="hidden"
                     whileInView="visible"
