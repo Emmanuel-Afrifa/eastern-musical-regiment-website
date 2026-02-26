@@ -5,7 +5,7 @@ import TitleSplitColors from "../atoms/TitleSplitColors"
 import { motion } from "framer-motion"
 import { staggerContainer, blurScale, fadeUp } from "@/src/lib/variants"
 import Image from "next/image"
-import trumpetImg from "../../../public/images/trumpet-img-bg.jpg"
+import trumpetImg from "../../../public/images/trumpet-img-bg.webp"
 
 const AboutIntroSection = () => {
     return (

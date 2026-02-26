@@ -5,7 +5,7 @@ import TitleSplitColors from "../atoms/TitleSplitColors"
 import { motion } from "framer-motion"
 import { staggerContainer, blurScale, spinScaleSide, fadeUp } from "@/src/lib/variants"
 import Image from "next/image"
-import saxImg from "../../../public/images/sax-img-bg.jpg"
+import saxImg from "../../../public/images/sax-img-bg.webp"
 
 const BandsIntroSection = () => {
     return (
