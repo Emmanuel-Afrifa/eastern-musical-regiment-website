@@ -23,7 +23,6 @@ const EventsSection = ({events}: {events: Event[]}) => {
     const goToPreviousEvent = () => {
         if (currentIndex > 0) {
             setCurrentIndex(prevIndex => prevIndex - 1)
-            console.log(`Clicked Previous ${currentIndex}`)
             requestAnimationFrame(scrollToTop)
         }
     }
@@ -31,7 +30,6 @@ const EventsSection = ({events}: {events: Event[]}) => {
     const goToNextEvent = () => {
         if (currentIndex < events.length-1) {
             setCurrentIndex(prevIndex => prevIndex + 1)
-            console.log(`Clicked Next ${currentIndex}`)
             requestAnimationFrame(scrollToTop)
         }
     }
