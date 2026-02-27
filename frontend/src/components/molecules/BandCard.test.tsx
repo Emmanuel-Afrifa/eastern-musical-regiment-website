@@ -76,5 +76,26 @@ describe("Band Card component", () => {
         // no preview text renders
         expect(screen.getByText(/no media to preview/i)).toBeInTheDocument()
     })
+
+    it("Previous and next buttons work when the overlay is opened and there's media", () => {
+        render(<BandCard bandItem={mockDataFull}/>)
+
+        const mainBandImg = screen.getByRole("img", {name: /band image/i})
+        fireEvent.click(mainBandImg)
+
+        const previousButton = screen.getByRole("button", {name: /previous button/i})
+        const nextButton = screen.getByRole("button", {name: /next button/i})
+
+        // Initially image shows
+        expect(screen.getByRole("img", {name: /band performance image/i})).toBeInTheDocument()
+
+        // Image goes away for youtube card to appear when next button is clicked
+        fireEvent.click(nextButton)
+        expect(screen.queryByRole("img", {name: /band performance image/i})).not.toBeInTheDocument()
+
+        // Clicking previous button goes back to the image
+        fireEvent.click(previousButton)
+        expect(screen.getByRole("img", {name: /band performance image/i})).toBeInTheDocument()
+    })
 })
 
