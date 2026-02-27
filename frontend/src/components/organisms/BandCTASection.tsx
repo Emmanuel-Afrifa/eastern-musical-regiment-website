@@ -45,7 +45,7 @@ const BandCTASection = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="button text-fg-gray inline-block border-2 border-fg-gray px-10 py-3 mt-10 btn-hover"
-                        aria-label="request band link"
+                        aria-label="request a band link"
                     >
                         Request a Band
                     </motion.a>
