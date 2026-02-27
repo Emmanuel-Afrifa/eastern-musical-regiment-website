@@ -1,7 +1,7 @@
 "use client"
 import Section from "../atoms/Section"
 import Container from "../atoms/Container"
-import SlideShow from "../atoms/SlideShow"
+import SlideShow from "../molecules/SlideShow"
 import { motion } from "framer-motion"
 import { staggerContainer } from "@/src/lib/variants"
 
