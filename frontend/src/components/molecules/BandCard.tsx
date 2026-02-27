@@ -8,7 +8,7 @@ import { faClose } from "@fortawesome/free-solid-svg-icons"
 import YoutubeCard from "./YoutubeCard"
 
 type BandProps = {
-    id: string;
+    id?: string;
     name: string;
     image: string;
     description: string;
@@ -101,7 +101,7 @@ const BandCard = ({bandItem}: {bandItem: BandProps}) => {
                                     <div className="relative aspect-video rounded-2xl">
                                         <Image
                                             src={mediaItem.src}
-                                            alt="band image"
+                                            alt="band performance image"
                                             fill
                                             className="object-cover w-full h-full rounded-2xl"
                                         />
