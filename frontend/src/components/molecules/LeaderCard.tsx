@@ -34,10 +34,10 @@ const LeaderCard = ({leaderInfo}: {leaderInfo: LeaderProps}) => {
         (socials && socials.facebook !== "") && {icon: faFacebook, href: `https://facebook.com/${socials.facebook}`, ariaLabel: "facebook page"},
         (socials && socials.whatsapp !== "") && {icon: faWhatsapp, href: `https://wa.me/${socials.whatsapp}`, ariaLabel: "whatsapp contact"},
         (socials && socials.instagram !== "") && {icon: faInstagram, href: `https://instagram.com/${socials.instagram}`, ariaLabel: "instagram page"},
-        (socials && socials.tiktok !== "") && {icon: faTiktok, href: `https://facebook.com/${socials.tiktok}`, ariaLabel: "tiktok page"},
-        (socials && socials.youtube !== "") && {icon: faYoutube, href: `https://facebook.com/${socials.youtube}`, ariaLabel: "youtube page"},
-        (socials && socials.linkedin !== "") && {icon: faLinkedin, href: `https://facebook.com/${socials.linkedin}`, ariaLabel: "linkedin page"},
-        (socials && socials.x !== "") && {icon: faXTwitter, href: `https://facebook.com/${socials.x}`, ariaLabel: "X, (formerly twitter) page"}
+        (socials && socials.tiktok !== "") && {icon: faTiktok, href: `https://tiktok.com/${socials.tiktok}`, ariaLabel: "tiktok page"},
+        (socials && socials.youtube !== "") && {icon: faYoutube, href: `https://youtube.com/${socials.youtube}`, ariaLabel: "youtube page"},
+        (socials && socials.linkedin !== "") && {icon: faLinkedin, href: `https://linkedin.com/${socials.linkedin}`, ariaLabel: "linkedin page"},
+        (socials && socials.x !== "") && {icon: faXTwitter, href: `https://x.com/${socials.x}`, ariaLabel: "X, (formerly twitter) page"}
     ]
 
     return (
@@ -83,7 +83,7 @@ const LeaderCard = ({leaderInfo}: {leaderInfo: LeaderProps}) => {
                             <a 
                                 key={index}
                                 href={socialAcc.href}
-                                aria-label={`${leaderInfo.role}'s ${socialAcc.ariaLabel}`}
+                                aria-label={`${leaderInfo.role.toLowerCase()}'s ${socialAcc.ariaLabel}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-fg-dark-gray hover:text-gold/80"

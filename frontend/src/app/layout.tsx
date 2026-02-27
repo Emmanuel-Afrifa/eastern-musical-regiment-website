@@ -34,11 +34,11 @@ export default function RootLayout({
         <body
             className={`${montserrat.variable} ${inter.variable} antialiased`}
         >
+            <Header />
             <main>
-                <Header />
-                {children}
-                <Footer />
+                {children} 
             </main>
+            <Footer />
         </body>
       </html>
     );
