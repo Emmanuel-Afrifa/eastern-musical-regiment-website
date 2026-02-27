@@ -24,7 +24,7 @@ const Footer = () => {
             <Container>
                 <div className="flex flex-col px-6 md:px-10 lg:px-30">
                     <div className="flex flex-col">
-                        <div className="flex flex-col md:flex-row justify-between">
+                        <div className="flex flex-col min-[500px]:flex-row justify-between">
                             <div className="flex flex-col justify-between">
                                 <h3 className="font-inter text-lg md:text-xl font-bold text-white mb-6">Quick Links</h3>
                                 <ul className="flex flex-col gap-3 md:gap-4 lg:gap-5">
@@ -46,7 +46,7 @@ const Footer = () => {
                                 </ul>
                             </div>
 
-                            <div className="mt-8 md:mt-0">
+                            <div className="mt-8 min-[500px]:mt-0">
                                 <h3 className="font-inter text-lg md:text-xl font-bold text-white mb-6">Contact Us</h3>
                                 <ul className="flex flex-col gap-3 md:gap-4 lg:gap-5 text-fg-dark-gray text-xs md:text-base lg:text-lg font-inter">
                                     <li>
