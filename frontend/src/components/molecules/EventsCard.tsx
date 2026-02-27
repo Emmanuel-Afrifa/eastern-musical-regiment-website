@@ -29,8 +29,18 @@ const EventsCard = ({eventItem}: {eventItem: Event}) => {
         {
             icon: faCalendar, 
             subTitle: `${month} ${day}, ${year}`, 
-            subSubTitle: `${displayHour}:${timeMinute} ${timeSuffix}`},
-        {icon: faLocation, subTitle: eventItem.Venue, subSubTitle: eventItem.City}
+            subSubTitle: `${displayHour}:${timeMinute} ${timeSuffix}`,
+            dataTestIdSubTitle: "event date",
+            dataTestIdSubsubTitle: "event time"
+        },
+        {
+            icon: 
+            faLocation, 
+            subTitle: eventItem.Venue, 
+            subSubTitle: eventItem.City,
+            dataTestIdSubTitle: "event venue",
+            dataTestIdSubsubTitle: "event city"
+        }
     ]
 
 
@@ -59,8 +69,18 @@ const EventsCard = ({eventItem}: {eventItem: Event}) => {
                         >
                             <FontAwesomeIcon icon={details.icon} className="text-xl md:text-2xl text-gold mr-3 md:mr-8" />
                             <div className="flex flex-col items-start">
-                                <p className="text-fg-fade-white text-sm md:text-base lg:text-lg text-left">{details.subTitle}</p>
-                                <p className="text-fg-dark-gray text-xs md:text-sm lg:text-base mt-1 text-left">{details.subSubTitle}</p>
+                                <p 
+                                    className="text-fg-fade-white text-sm md:text-base lg:text-lg text-left"
+                                    data-testid={details.dataTestIdSubTitle}
+                                >
+                                    {details.subTitle}
+                                </p>
+                                <p 
+                                    className="text-fg-dark-gray text-xs md:text-sm lg:text-base mt-1 text-left"
+                                    data-testid={details.dataTestIdSubsubTitle}
+                                >
+                                    {details.subSubTitle}
+                                </p>
                             </div>
                         </div>
                     )
@@ -87,7 +107,7 @@ const EventsCard = ({eventItem}: {eventItem: Event}) => {
                     <div className="relative w-[90vw] h-[90vh] rounded-2xl">
                         <Image
                             src={imgSrc}
-                            alt={eventItem.image.alternativeText + "full screen" || "event image full screen"}
+                            alt={"event image full screen"}
                             fill 
                             className="object-contain rounded-2xl"
                         />
