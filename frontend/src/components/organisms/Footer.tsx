@@ -14,7 +14,7 @@ const Footer = () => {
 
     const quickLinks: QuickLink[] = [
         {id: "01", name: "Home", href: "/#hero", ariaLabel: "home link"},
-        {id: "02", name: "About", href: "/about", ariaLabel: "about link"},
+        {id: "02", name: "About", href: "/about", ariaLabel: "about us link"},
         {id: "03", name: "Our Bands", href: "/bands", ariaLabel: "our bands link"},
         {id: "04", name: "Events", href: "/events", ariaLabel: "events link"},
     ]
