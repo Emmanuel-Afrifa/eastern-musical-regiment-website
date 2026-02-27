@@ -4,7 +4,7 @@ import { staggerContainer, fadeLeft, fadeRight } from "@/src/lib/variants"
 
 type TimelineProps = {
     timelineDetails: {
-        id: string;
+        id?: string;
         title: string;
         year: string;
         description: string;
@@ -53,9 +53,6 @@ const TimelineItem = ({timelineDetails, index}: TimelineProps) => {
                     <div className="md:hidden block w-full h-0.5 bg-fg-gray/20"></div>
                 </motion.div>
             </div>
-
-            {/* Center Circle */}
-            
         </div>
     )
 }
