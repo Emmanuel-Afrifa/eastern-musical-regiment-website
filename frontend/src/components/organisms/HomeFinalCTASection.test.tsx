@@ -6,7 +6,8 @@ describe("Home Final CTA Section component", () => {
         render(<HomeFinalCTASection />)
     })
 
-    it("Renders link", () => {
+    it("Renders the heading and link", () => {
+        expect(screen.getByRole("heading", {level: 2})).toBeInTheDocument()
         expect(screen.getByRole("link", { name: /join the regiment today link/i})).toBeInTheDocument()
     })
 
