@@ -1,12 +1,13 @@
 import HomePageTemplate from "../components/_templates/HomePageTemplate";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    alternates: {
+        // canonical: "https://royal-music-academy.vercel.app/",
+    },
+};
 
 export default async function Home() {
-
-    // await new Promise((resolve) => {
-    //     setTimeout(() => {
-    //         resolve("intentional delay")
-    //     }, 10000)
-    // })
 
     return (
         <section>
