@@ -1,61 +1,44 @@
-# 🚀 Getting started with Strapi
+# Eastern Musical Regiment – CMS (Strapi)
+This directory contains the Strapi CMS used to manage the event contents for the Eastern Musical Regiment website's event page.
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
+## Overview
+- CMS: Strapi
+- Purpose: Manage website content (events)
+- Admin UI is used for content modeling and management.
 
-### `develop`
+## Setup
 
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
+### Prerequisites
+- Node.js >= 18
+- npm
 
-```
-npm run develop
-# or
-yarn develop
-```
+### Installation
+    ```bash
+    npm install
+    ```
 
-### `start`
+### Running the CMS locally
+    ```bash
+    npm run develop
+    ```
+    - Admin panel will be available at `http://localhost:1337/admin`
 
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-start)
+### Admin Setup
+- On first run, create an admin account via the browser UI.
+- Content types, roles, and permissions are configured through the Strapi dashboard.
 
-```
-npm run start
-# or
-yarn start
-```
+### Environment Variables
+- Environment variables are managed via .env
+- Deployment-specific values are configured on Railway.
 
-### `build`
+### API Usage
+- Content is consumed by the frontend via Strapi’s REST API.
 
-Build your admin panel. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-build)
+### Deployment
+- The CMS is deployed on Strapi Cloud at the [url](https://sparkling-horses-c190d22d76.strapiapp.com/).
+- Media uploads and content are managed through the Strapi admin interface.
 
-```
-npm run build
-# or
-yarn build
-```
+### Notes
+- Minimal backend customization was required for this project.
+- Default Strapi configuration is used for most features.
 
-## ⚙️ Deployment
-
-Strapi gives you many possible deployment options for your project including [Strapi Cloud](https://cloud.strapi.io). Browse the [deployment section of the documentation](https://docs.strapi.io/dev-docs/deployment) to find the best solution for your use case.
-
-```
-yarn strapi deploy
-```
-
-## 📚 Learn more
-
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://strapi.io/blog) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
-
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
-
-## ✨ Community
-
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
-
----
-
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>

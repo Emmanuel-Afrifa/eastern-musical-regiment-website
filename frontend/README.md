@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Eastern Musical Regiment Frontend (Nextjs)
+Official frontend application for the Eastern Musical Regiment website, built with **Next.js** using the **Atomic Design** component architecture.
 
-## Getting Started
+## Overview
+This project is a responsive web application designed and developed for **Eastern Musical Regiment**.
+Key goals of the project:
+- Clear content hierarchy
+- High performance and SEO friendliness
+- Maintainable and scalable frontend architecture
+- Smooth user experience across devices
 
-First, run the development server:
+## Tech Stack
+- **Framework:** Next.js (App Router)
+- **Language:** TypeScript
+- **Styling:**  Tailwind CSS
+- **Component Architecture:** Atomic Design
+- **State & UI Logic:** React
+- **Animations:** Framer Motion
+- **Deployment:** Vercel
+- **Testing:** Jest, React Testing Library (RTL)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Project Structure
+```txt
+src/
+├── app/                              # Next.js App Router pages and layouts
+├── components/
+│   ├── atoms/                        # Basic UI elements (Button, Logo, etc.)
+│   ├── molecules/                    # Combined UI units (NavItem, etc.)
+│   ├── organisms/                    # Section-level components (Hero, Sections)
+│   └── _templates/                   # Page-level composition
+│ 
+├── hooks/                            # Custom React hooks 
+├── libs/                             # Utility functions (variants.ts - for framer animations, 
+|                                       strapi data fetch logic, and types)
+└── jest.setup.ts                     # Jest setup file
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Prerequisites
+- Node.js >= 18 (tested Node 22)
+- npm
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Installation
+```bash
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Local Dev Server
+```bash
+npm run dev
+```
+- App will be available at `http://localhost:3000`
 
-## Learn More
+## Environment Variables
+- Create a `.env.local` file in the root directory
+- The file must at least have the variable below
+    - `NEXT_PUBLIC_STRAPI_URL`
 
-To learn more about Next.js, take a look at the following resources:
+## Running Tests
+- Use the command below to run the tests
+    ```bash
+    npm test
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Development Notes
+- Section navigation uses both programmatic scrolling and hash navigation for consistent UX
+- Components are written to be reusable and composable
+- After any change or update to the code, run the tests locally before committing your changes.
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deployment
+- The project is deployed via Vercel at the [url](https://novamusicschool.vercel.app/).
+- The videos used are uploaded to [Youtube](https://www.youtube.com/) and integrated in the app via iframes
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+#### Typical deployment flow:
+- Push changes to the main branch
+- CI/CD automatically builds and deploys the application
+    - CI uses Github Actions to run test on push or pull requests (PRs) to the `main` branch
+    - Vercel handles CD (no explicit setup needed now)
+
+## Image & Asset Credits
+- Some visual assets used in this project are sourced from Unsplash and Pixabay, and are used in accordance with their license.
+- Detailed credits can be found in:
+    - CREDITS.md
+
+## Ownership & Maintenance
+- Client: Eastern Musical Regiment
+- Developer: Emmanuel Afrifa
+- Repository Access: Restricted
+For updates or maintenance, contact the developer directly.
