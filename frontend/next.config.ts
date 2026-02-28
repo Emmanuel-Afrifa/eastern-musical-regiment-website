@@ -12,6 +12,10 @@ const nextConfig: NextConfig = {
                 hostname: "localhost",
                 port: "1337",
                 pathname: "/uploads/**"
+            },
+            {
+                protocol: "https",
+                hostname: "typical-fitness-9a80421713.media.strapiapp.com"
             }
         ],
         dangerouslyAllowLocalIP: true

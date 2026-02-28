@@ -45,7 +45,7 @@ Official repository for the Eastern Musical Regiment website. Uses Nextjs and ta
 - See README.md files inside each app.
 
 ## Deployment
-- Strapi CMS app was deployed on Strapi cloud at the [url](https://sparkling-horses-c190d22d76.strapiapp.com/)
+- Strapi CMS app was deployed on Strapi cloud at the [url](https://typical-fitness-9a80421713.strapiapp.com/)
 - Nextjs app was deployed on Vercel at the [url](https://novamusicschool.vercel.app/)
 
 ## Maintenance
