@@ -18,6 +18,5 @@ export default function SiteMap(): MetadataRoute.Sitemap {
             url: "https://easternmusicalregiment.vercel.app/events",
             lastModified: new Date()
         }
-
     ]
 }
