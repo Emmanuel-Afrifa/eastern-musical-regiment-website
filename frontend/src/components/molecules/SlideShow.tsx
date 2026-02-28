@@ -12,13 +12,12 @@ const SlideShow = () => {
     const images: string[] = useMemo(() => {
         return (
             [
-                "/images/img-1.jpg",
-                "/images/img-2.jpg",
-                "/images/img-3.jpg",
-                "/images/img-4.jpg",
-                "/images/img-5.jpg",
-                "/images/img-6.jpg",
-                "/images/img-7.jpg",
+                "/images/img-1.webp",
+                "/images/img-2.webp",
+                "/images/img-3.webp",
+                "/images/img-4.webp",
+                "/images/img-6.webp",
+                "/images/img-7.webp",
             ]
         )
     }, [])
