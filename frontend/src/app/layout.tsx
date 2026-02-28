@@ -25,7 +25,7 @@ export const metadata: Metadata = {
         default: "Eastern Musical Regiment"
     },
     description: "The official platform of the Eastern Musical Regiment, a unified musical regiment bringing together brassbands in the Eastern Region under shared values of excellence, discipline, and artistic integrity. Discover our bands, commitment to musical distinction and upcoming events.",
-    // metadataBase: new URL("https://novamusicschool.vercel.app/"), 
+    metadataBase: new URL("https://easternmusicalregiment.vercel.app/"), 
     keywords: [
         "eastern musical regiment",
         "eastern musical",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: "Eastern Musical Regiment",
         description: "The official platform of the Eastern Musical Regiment, a unified musical regiment bringing together brassbands in the Eastern Region under shared values of excellence, discipline, and artistic integrity. Discover our bands, commitment to musical distinction and upcoming events.",
-        // url: "https://novamusicschool.vercel.app/",
+        url: "https://easternmusicalregiment.vercel.app/",
         siteName: "Eastern Musical Regiment",
         images: [
             {

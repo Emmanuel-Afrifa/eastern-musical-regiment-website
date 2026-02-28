@@ -3,7 +3,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
     alternates: {
-        // canonical: "https://royal-music-academy.vercel.app/",
+        canonical: "https://easternmusicalregiment.vercel.app/",
     },
 };
 

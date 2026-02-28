@@ -69,7 +69,7 @@ npm run dev
 
 
 ## Deployment
-- The project is deployed via Vercel at the [url](https://novamusicschool.vercel.app/).
+- The project is deployed via Vercel at the [url](https://easternmusicalregiment.vercel.app/).
 - The videos used are uploaded to [Youtube](https://www.youtube.com/) and integrated in the app via iframes
 
 #### Typical deployment flow:

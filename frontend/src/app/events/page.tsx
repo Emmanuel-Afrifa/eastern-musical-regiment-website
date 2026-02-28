@@ -5,7 +5,7 @@ export const metadata: Metadata = {
     title: "Events",
     description: "Stay informed about upcoming performances, official programs, and regional events organized by the Eastern Musical Regiment and its affiliated bands.",
     alternates: {
-        // canonical: "https://royal-music-academy.vercel.app/",
+        canonical: "https://easternmusicalregiment.vercel.app/events",
     },
 };
 
