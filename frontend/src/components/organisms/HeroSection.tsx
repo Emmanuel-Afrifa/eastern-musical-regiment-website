@@ -5,9 +5,29 @@ import { staggerContainer, blurScale, openUp } from "@/src/lib/variants"
 import Image from "next/image"
 
 const HeroSection = () => {
+
+
     return (
         <section id="hero" className="w-full min-h-screen center relative py-28 md:py-14">
             <Container>
+                <div 
+                    className="absolute inset-0 h-screen w-full"
+                    style={{ clipPath: "inset(0 0 0 0)"}}
+                >
+                    <div 
+                        className="fixed top-0 left-0 h-screen w-full -z-10 overflow-hidden"
+                    >
+                        <Image
+                            src="/images/hero-img.webp"
+                            alt="background image"
+                            fill
+                            sizes="100vw"
+                            className="h-full w-full object-cover"
+                            priority={true}
+                        />
+                        <div className="absolute inset-0 bg-black/60" />
+                    </div>
+                </div>
                 <motion.div 
                     className="w-full flex flex-col items-center pt-10 px-4"
                     variants={staggerContainer}
@@ -15,20 +35,6 @@ const HeroSection = () => {
                     whileInView="visible"
                     viewport={{once: true}}
                 >
-                    <div className="absolute inset-0 h-screen w-full z-0 overflow-hidden">
-                        <div className="relative h-screen w-full">
-                            <Image
-                                src="/images/hero-img.webp"
-                                alt="background image"
-                                fill
-                                sizes="100vw"
-                                className="h-full w-full object-cover"
-                                priority={true}
-                            />
-                        </div>
-                    </div>
-                    <div className="absolute z-2 inset-0 h-screen w-full bg-black/60"></div>
-
                     <motion.h1 
                         className="text-white text-4xl md:text-6xl xl:text-[80px] 2xl:text-9xl text-center mb-8 md:mb-10 2xl:mb-16 z-8"
                         variants={openUp}
