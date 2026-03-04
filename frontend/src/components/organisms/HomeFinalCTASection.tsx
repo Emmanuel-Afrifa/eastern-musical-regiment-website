@@ -4,13 +4,34 @@ import Container from "../atoms/Container"
 import TitleSplitColors from "../atoms/TitleSplitColors"
 import { motion } from "framer-motion"
 import { staggerContainer, spinScaleSide, blurScale, fadeUp } from "@/src/lib/variants"
+import Image from "next/image"
 
 const HomeFinalCTASection = () => {
     return (
-        <Section classname="band-bg-parallax">
+        <Section 
+            classname="relative h-auto w-full" 
+        >
+            <div 
+                className="absolute inset-0 h-full w-full"
+                style={{clipPath: "inset(0 0 0 0)"}}
+            >
+                <div 
+                    className="fixed top-0 left-0 h-full w-full -z-10 overflow-hidden"
+                >
+                    <Image
+                        src="/images/footer-bg-img.webp"
+                        alt="background image"
+                        fill
+                        sizes="100vw"
+                        className="h-full w-full object-cover"
+                        priority={true}
+                    />
+                    <div className="absolute inset-0 bg-black/85" />
+                </div>
+            </div>
             <Container>
                 <motion.div 
-                    className="flex flex-col items-center md:px-15"
+                    className="flex flex-col items-center md:px-15 z-8"
                     initial="hidden"
                     variants={staggerContainer}
                 >
@@ -27,7 +48,7 @@ const HomeFinalCTASection = () => {
                         />
                     </motion.div>
                     <motion.p 
-                        className="text-fg-gray section-description-text mt-12 text-center px-6"
+                        className="text-fg-gray section-description-text mt-12 text-center px-6 z-8"
                         variants={fadeUp}
                         initial="hidden"
                         whileInView="visible"
@@ -40,7 +61,7 @@ const HomeFinalCTASection = () => {
                         href="https://forms.gle/iCQtqZY2sEUtLZCt5"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="button bg-gold font-montserrat px-10 py-3 text-sm md:text-base 2xl:text-lg text-fg-black border-2 border-transparent mt-12 btn-hover"
+                        className="button bg-gold font-montserrat px-10 py-3 text-sm md:text-base 2xl:text-lg text-fg-black border-2 border-transparent mt-12 btn-hover z-8"
                         aria-label="join the regiment today link"
                         variants={spinScaleSide}
                         initial="hidden"

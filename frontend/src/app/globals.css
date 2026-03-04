@@ -71,14 +71,6 @@
         @apply flex justify-center items-center
     }
 
-    .band-bg-parallax {
-        background: linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url("../../public/images/footer-bg-img.webp");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        background-attachment: fixed;
-    }
-
     .button {
         @apply rounded-xl cursor-pointer font-semibold
     }
