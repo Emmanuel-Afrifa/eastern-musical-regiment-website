@@ -2,10 +2,11 @@
 import Container from "../atoms/Container"
 import { motion } from "framer-motion"
 import { staggerContainer, blurScale, openUp } from "@/src/lib/variants"
+import Image from "next/image"
 
 const HeroSection = () => {
     return (
-        <section id="hero" className="w-full min-h-screen center home-bg py-28 md:py-14">
+        <section id="hero" className="w-full min-h-screen center relative py-28 md:py-14">
             <Container>
                 <motion.div 
                     className="w-full flex flex-col items-center pt-10 px-4"
@@ -14,8 +15,22 @@ const HeroSection = () => {
                     whileInView="visible"
                     viewport={{once: true}}
                 >
+                    <div className="absolute inset-0 h-screen w-full z-0 overflow-hidden">
+                        <div className="relative h-screen w-full">
+                            <Image
+                                src="/images/hero-img.webp"
+                                alt="background image"
+                                fill
+                                sizes="100vw"
+                                className="h-full w-full object-cover"
+                                priority={true}
+                            />
+                        </div>
+                    </div>
+                    <div className="absolute z-2 inset-0 h-screen w-full bg-black/60"></div>
+
                     <motion.h1 
-                        className="text-white text-4xl md:text-6xl xl:text-[80px] 2xl:text-9xl text-center mb-8 md:mb-10 2xl:mb-16"
+                        className="text-white text-4xl md:text-6xl xl:text-[80px] 2xl:text-9xl text-center mb-8 md:mb-10 2xl:mb-16 z-8"
                         variants={openUp}
                         style={{transformPerspective: 1000}}
                     >
@@ -23,13 +38,13 @@ const HeroSection = () => {
                         <span className="text-gold">Meets Culture</span>
                     </motion.h1>
                     <motion.p 
-                        className="font-montserrat text-base md:text-lg 2xl:xl text-white max-w-[55ch] text-center mb-8 md:mb-10 2xl:mb-16 px-6 md:px-15"
+                        className="font-montserrat text-base md:text-lg 2xl:xl text-white max-w-[55ch] text-center mb-8 md:mb-10 2xl:mb-16 px-6 md:px-15 z-8"
                         variants={blurScale}
                     >
                         Join the Eastern Musical Regiment. A vibrant community celebrating musical 
                         excellence and cultural heritage through brass, wind and percussion
                     </motion.p>
-                    <div className="flex flex-wrap justify-center gap-6">
+                    <div className="flex flex-wrap justify-center gap-6 z-8">
                         <motion.a
                             href="https://forms.gle/iCQtqZY2sEUtLZCt5"
                             target="_blank"
