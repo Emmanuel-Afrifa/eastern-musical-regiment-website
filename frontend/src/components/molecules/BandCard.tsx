@@ -50,6 +50,7 @@ const BandCard = ({bandItem}: {bandItem: BandProps}) => {
                         alt="band image"
                         fill
                         className="object-cover w-full h-full rounded-2xl group-hover:scale-110 overflow-hidden group-hover:opacity-50 transition-all duration-700"
+                        sizes="(min-width: 1620px) 692px, (min-width: 1040px) calc(37.86vw + 86px), (min-width: 780px) calc(75vw - 60px), calc(100vw - 48px)"
                     />
                 </div>
                 <div className="w-full lg:w-1/2 flex flex-col items-center xl:items-start xl:ml-14 mt-8 xl:mt-0">

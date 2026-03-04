@@ -50,6 +50,7 @@ const SlideShow = () => {
                             "absolute inset-0 transition-all duration-1000 object-cover w-full h-full",
                             i === index ? "opacity-100" : "opacity-0"
                         )}
+                        sizes="(min-width: 1520px) 1440px, calc(95vw + 15px)"
                     />
                 )
             })}

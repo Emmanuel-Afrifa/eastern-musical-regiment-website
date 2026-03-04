@@ -17,6 +17,7 @@ const YoutubeCard = ({videoId}: {videoId: string}) => {
                         alt="thumbnail image"
                         fill
                         className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-all duration-1000"
+                        sizes="(min-width: 620px) 540px, 92vw"
                     />
 
                     <div className="absolute inset-0 bg-fg-black/20 group-hover:bg-fg-black/40 transition"></div>

@@ -22,9 +22,11 @@ const BandsIntroSection = () => {
                         <div className="relative aspect-video w-full h-full">
                                 <Image
                                 src={saxImg}
-                                alt="trumper image"
+                                alt="saxophone image"
                                 fill
                                 className="w-full h-full object-cover"
+                                sizes="(min-width: 1280px) 85vw, 100vw"
+                                priority={true}
                             />
                         </div>
                     </div>

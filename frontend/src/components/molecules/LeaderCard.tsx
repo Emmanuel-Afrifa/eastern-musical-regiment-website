@@ -48,6 +48,7 @@ const LeaderCard = ({leaderInfo}: {leaderInfo: LeaderProps}) => {
                     alt={leaderInfo.image.alt || "leader image"}
                     fill
                     className="object-cover w-full h-full rounded-t-2xl group-hover:scale-110 transition-all duration-700 group-hover:opacity-70"
+                    sizes="(min-width: 1280px) 85vw, 100vw"
                 />
             </div>
             <div className="p-4 md:p-6">

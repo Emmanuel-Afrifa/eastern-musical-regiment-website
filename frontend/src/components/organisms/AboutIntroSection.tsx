@@ -25,6 +25,8 @@ const AboutIntroSection = () => {
                                 alt="trumper image"
                                 fill
                                 className="w-full h-full object-cover"
+                                sizes="(min-width: 1280px) 85vw, 100vw"
+                                priority={true}
                             />
                        </div>
                     </div>

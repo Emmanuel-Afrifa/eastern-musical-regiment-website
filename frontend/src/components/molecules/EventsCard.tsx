@@ -57,6 +57,7 @@ const EventsCard = ({eventItem}: {eventItem: Event}) => {
                     alt={eventItem.image.alternativeText || "event image"}
                     fill 
                     className="w-full h-full object-cover rounded-2xl"
+                    sizes="(min-width: 600px) 768px, calc(139.29vw - 40px)"
                 />
             </div>
             <div className="mt-10 flex flex-col items-start">
@@ -110,6 +111,7 @@ const EventsCard = ({eventItem}: {eventItem: Event}) => {
                             alt={"event image full screen"}
                             fill 
                             className="object-contain rounded-2xl"
+                            sizes="(min-width: 600px) 768px, calc(139.29vw - 40px)"
                         />
                     </div>
                 </div>
