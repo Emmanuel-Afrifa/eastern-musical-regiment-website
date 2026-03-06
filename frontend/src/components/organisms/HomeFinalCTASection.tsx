@@ -9,7 +9,7 @@ import Image from "next/image"
 const HomeFinalCTASection = () => {
     return (
         <Section 
-            classname="relative h-auto w-full" 
+            classname="relative h-auto w-full 2xl:py-56" 
         >
             <div 
                 className="absolute inset-0 h-full w-full"
@@ -23,7 +23,7 @@ const HomeFinalCTASection = () => {
                         alt="background image"
                         fill
                         sizes="100vw"
-                        className="h-full w-full object-cover"
+                        className="h-full w-full object-cover object-[30%_0%]"
                         priority={true}
                     />
                     <div className="absolute inset-0 bg-black/85" />

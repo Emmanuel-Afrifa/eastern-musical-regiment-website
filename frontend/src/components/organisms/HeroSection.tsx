@@ -9,10 +9,10 @@ const HeroSection = () => {
     return (
         <section id="hero" className="w-full min-h-screen center relative py-28 md:py-14">
             <div 
-                className="absolute inset-0 h-screen w-full"
+                className="absolute inset-0 h-full w-full"
                 style={{ clipPath: "inset(0 0 0 0)"}}
             >
-                <div className="fixed top-0 left-0 h-screen w-full -z-10 overflow-hidden">
+                <div className="fixed top-0 left-0 h-full w-full -z-10 overflow-hidden">
                     <Image
                         src="/images/hero-img.webp"
                         alt="background image"
