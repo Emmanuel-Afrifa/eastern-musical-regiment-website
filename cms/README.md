@@ -35,7 +35,7 @@ This directory contains the Strapi CMS used to manage the event contents for the
 - Content is consumed by the frontend via Strapi’s REST API.
 
 ### Deployment
-- The CMS is deployed on Strapi Cloud at the [url](https://typical-fitness-9a80421713.strapiapp.com/).
+- The CMS is deployed on Strapi Cloud at [https://typical-fitness-9a80421713.strapiapp.com/](https://typical-fitness-9a80421713.strapiapp.com/).
 - Media uploads and content are managed through the Strapi admin interface.
 
 ### Notes

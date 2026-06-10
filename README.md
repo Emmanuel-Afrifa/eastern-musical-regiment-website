@@ -45,8 +45,8 @@ Official repository for the Eastern Musical Regiment website. Uses Nextjs and ta
 - See README.md files inside each app.
 
 ## Deployment
-- Strapi CMS app was deployed on Strapi cloud at the [url](https://typical-fitness-9a80421713.strapiapp.com/)
-- Nextjs app was deployed on Vercel at the [url](https://easternmusicalregiment.vercel.app/)
+- Strapi CMS app was deployed on Strapi cloud at [https://typical-fitness-9a80421713.strapiapp.com/](https://typical-fitness-9a80421713.strapiapp.com/)
+- Nextjs app was deployed on Vercel at [https://easternmusicalregiment.vercel.app/](https://easternmusicalregiment.vercel.app/)
 
 ## Maintenance
 - This repository is maintained by the developer.
