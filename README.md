@@ -3,6 +3,10 @@
 ## Overview
 Official repository for the Eastern Musical Regiment website. Uses Nextjs and tailwind css for the frontend application and Strapi for content management.
 
+## Sample Screenshots
+<img src="./screenshots/screenshots-about.jpeg" alt="about us page" style="width:100%;height:auto" />
+<img src="./screenshots/screenshots-bands.jpeg" alt="our bands us page" style="width:100%;height:auto" />
+
 ## Repository Structure
 - frontend/ – Next.js frontend application
 - cms/ – Strapi CMS backend
